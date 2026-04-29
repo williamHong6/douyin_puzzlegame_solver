@@ -629,6 +629,23 @@ def batch_removed_count(batch_moves: list[dict]) -> int:
     return sum(move["removed_count"] for move in batch_moves)
 
 
+def pair_priority_rank(move: dict) -> int:
+    if move["removed_count"] != 2:
+        return 99
+    ordered = tuple(sorted(move["values"]))
+    preferred_pairs = [
+        (1, 9),
+        (2, 8),
+        (3, 7),
+        (4, 6),
+        (5, 5),
+    ]
+    try:
+        return preferred_pairs.index(ordered)
+    except ValueError:
+        return 99
+
+
 def find_valid_moves(board: list[list[int]]) -> list[dict]:
     rows = len(board)
     cols = len(board[0]) if rows else 0
@@ -695,7 +712,17 @@ def find_valid_moves(board: list[list[int]]) -> list[dict]:
 
 
 def sort_moves_for_batch(moves: list[dict], mode: str = "removed") -> list[dict]:
-    if mode == "easy":
+    if mode == "pair_priority":
+        key_func = lambda move: (
+            pair_priority_rank(move),
+            move["area"],
+            move["rect"][0],
+            move["rect"][1],
+            move["rect"][2],
+            move["rect"][3],
+            -move["removed_count"],
+        )
+    elif mode == "easy":
         key_func = lambda move: (
             0 if move["category"] == "easy" else 1,
             -move["removed_count"],
@@ -860,10 +887,12 @@ def get_algorithm_specs(strategy: str, beam_width: int) -> list[dict]:
         return [{"name": "beam_removed", "kind": "beam", "mode": "removed", "width": beam_width}]
     return [
         {"name": "greedy_removed", "kind": "greedy", "mode": "removed"},
+        {"name": "greedy_pair_priority", "kind": "greedy", "mode": "pair_priority"},
         {"name": "greedy_compact", "kind": "greedy", "mode": "compact"},
         {"name": "greedy_easy", "kind": "greedy", "mode": "easy"},
         {"name": "greedy_density", "kind": "greedy", "mode": "density"},
         {"name": "beam_removed", "kind": "beam", "mode": "removed", "width": beam_width},
+        {"name": "beam_pair_priority", "kind": "beam", "mode": "pair_priority", "width": max(20, beam_width // 2)},
         {"name": "beam_compact", "kind": "beam", "mode": "compact", "width": max(20, beam_width // 2)},
         {"name": "beam_density", "kind": "beam", "mode": "density", "width": max(20, beam_width // 2)},
     ]

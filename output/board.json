@@ -2,425 +2,425 @@
   "rows": 16,
   "cols": 10,
   "flat_numbers": [
-    9,
-    7,
-    1,
-    5,
-    1,
-    5,
-    1,
-    9,
     6,
-    7,
-    3,
-    6,
-    9,
-    2,
-    1,
-    9,
-    3,
-    8,
-    5,
-    5,
-    6,
-    1,
-    4,
-    3,
-    6,
-    5,
-    3,
-    5,
-    1,
-    7,
-    5,
-    3,
-    5,
-    7,
-    9,
-    4,
-    1,
-    4,
-    7,
-    1,
-    6,
-    5,
-    3,
-    1,
-    6,
-    1,
-    9,
-    7,
-    6,
-    5,
-    6,
-    5,
-    8,
-    7,
-    6,
-    9,
-    4,
-    3,
-    2,
-    2,
     5,
     5,
     8,
-    7,
     2,
-    1,
-    3,
-    1,
-    8,
-    7,
-    3,
-    3,
     6,
+    4,
+    1,
+    6,
+    7,
     9,
     6,
+    1,
+    3,
+    6,
+    4,
+    3,
+    4,
+    8,
+    6,
+    5,
+    1,
+    6,
+    8,
+    8,
+    3,
+    3,
+    1,
+    1,
+    3,
+    7,
+    9,
+    8,
+    7,
+    7,
+    5,
+    5,
+    3,
+    9,
+    1,
+    5,
+    5,
+    6,
+    1,
+    2,
+    6,
+    5,
     2,
     2,
     4,
-    4,
-    7,
-    6,
-    5,
     9,
-    9,
-    6,
+    8,
     8,
     6,
-    6,
-    8,
     3,
     6,
-    2,
-    6,
-    1,
     5,
+    6,
+    9,
     9,
     2,
+    2,
+    2,
+    9,
+    4,
+    7,
+    2,
+    7,
     3,
-    7,
-    6,
-    7,
-    8,
-    6,
-    8,
     9,
-    9,
-    5,
-    4,
-    6,
-    9,
+    2,
     5,
     8,
-    5,
-    8,
-    3,
-    2,
-    4,
-    4,
-    2,
-    2,
-    4,
-    2,
-    7,
-    2,
-    8,
     6,
-    4,
-    8,
+    2,
+    5,
     1,
     9,
+    3,
+    3,
+    8,
+    7,
+    1,
+    4,
+    9,
+    1,
+    9,
+    1,
+    5,
+    7,
+    2,
+    3,
     4,
     8,
+    7,
     3,
-    9,
+    1,
+    5,
     7,
     1,
-    3,
-    9,
-    3,
+    5,
+    5,
     9,
     8,
+    7,
+    6,
+    5,
+    6,
+    6,
+    2,
+    3,
+    5,
+    9,
+    4,
+    4,
+    2,
+    1,
+    2,
+    9,
+    5,
+    6,
+    3,
+    3,
     5,
     3,
     7,
     8,
-    1,
-    7,
-    8,
-    2,
-    2,
-    3,
-    2,
-    1,
+    5,
     5,
     4,
+    4,
+    2,
+    1,
+    1,
+    6,
+    1,
+    1,
+    6,
+    9,
     1,
     9,
+    6,
     2,
+    4,
+    7,
+    7,
+    6,
+    9,
+    4,
+    2,
+    9,
+    7,
+    3,
+    8,
     5,
-    2
+    8,
+    8,
+    4,
+    7,
+    5
   ],
   "board": [
     [
-      9,
-      7,
-      1,
-      5,
-      1,
-      5,
-      1,
-      9,
       6,
-      7
-    ],
-    [
-      3,
-      6,
-      9,
-      2,
-      1,
-      9,
-      3,
+      5,
+      5,
       8,
-      5,
-      5
-    ],
-    [
+      2,
       6,
-      1,
       4,
-      3,
-      6,
-      5,
-      3,
-      5,
       1,
+      6,
       7
     ],
     [
-      5,
+      9,
+      6,
+      1,
       3,
+      6,
+      4,
+      3,
+      4,
+      8,
+      6
+    ],
+    [
       5,
+      1,
+      6,
+      8,
+      8,
+      3,
+      3,
+      1,
+      1,
+      3
+    ],
+    [
       7,
       9,
+      8,
+      7,
+      7,
+      5,
+      5,
+      3,
+      9,
+      1
+    ],
+    [
+      5,
+      5,
+      6,
+      1,
+      2,
+      6,
+      5,
+      2,
+      2,
+      4
+    ],
+    [
+      9,
+      8,
+      8,
+      6,
+      3,
+      6,
+      5,
+      6,
+      9,
+      9
+    ],
+    [
+      2,
+      2,
+      2,
+      9,
       4,
+      7,
+      2,
+      7,
+      3,
+      9
+    ],
+    [
+      2,
+      5,
+      8,
+      6,
+      2,
+      5,
+      1,
+      9,
+      3,
+      3
+    ],
+    [
+      8,
+      7,
       1,
       4,
+      9,
+      1,
+      9,
+      1,
+      5,
+      7
+    ],
+    [
+      2,
+      3,
+      4,
+      8,
+      7,
+      3,
+      1,
+      5,
       7,
       1
     ],
     [
-      6,
       5,
-      3,
-      1,
-      6,
-      1,
+      5,
       9,
+      8,
       7,
       6,
+      5,
+      6,
+      6,
+      2
+    ],
+    [
+      3,
+      5,
+      9,
+      4,
+      4,
+      2,
+      1,
+      2,
+      9,
       5
     ],
     [
       6,
+      3,
+      3,
       5,
+      3,
+      7,
       8,
+      5,
+      5,
+      4
+    ],
+    [
+      4,
+      2,
+      1,
+      1,
+      6,
+      1,
+      1,
+      6,
+      9,
+      1
+    ],
+    [
+      9,
+      6,
+      2,
+      4,
+      7,
       7,
       6,
       9,
       4,
-      3,
-      2,
       2
     ],
     [
-      5,
-      5,
-      8,
-      7,
-      2,
-      1,
-      3,
-      1,
-      8,
-      7
-    ],
-    [
-      3,
-      3,
-      6,
-      9,
-      6,
-      2,
-      2,
-      4,
-      4,
-      7
-    ],
-    [
-      6,
-      5,
-      9,
-      9,
-      6,
-      8,
-      6,
-      6,
-      8,
-      3
-    ],
-    [
-      6,
-      2,
-      6,
-      1,
-      5,
-      9,
-      2,
-      3,
-      7,
-      6
-    ],
-    [
-      7,
-      8,
-      6,
-      8,
-      9,
-      9,
-      5,
-      4,
-      6,
-      9
-    ],
-    [
-      5,
-      8,
-      5,
-      8,
-      3,
-      2,
-      4,
-      4,
-      2,
-      2
-    ],
-    [
-      4,
-      2,
-      7,
-      2,
-      8,
-      6,
-      4,
-      8,
-      1,
-      9
-    ],
-    [
-      4,
-      8,
-      3,
       9,
       7,
-      1,
       3,
-      9,
-      3,
-      9
-    ],
-    [
       8,
       5,
-      3,
-      7,
       8,
-      1,
-      7,
       8,
-      2,
-      2
-    ],
-    [
-      3,
-      2,
-      1,
-      5,
       4,
-      1,
-      9,
-      2,
-      5,
-      2
+      7,
+      5
     ]
   ],
   "recognition_details": [
     {
       "index": 1,
       "file": "001.png",
-      "digit": 9,
-      "confidence": 0.8506356108828401,
-      "score": 2865.505616402512,
+      "digit": 6,
+      "confidence": 0.4809570187301205,
+      "score": 10346.184957725784,
       "hole_count": 1
     },
     {
       "index": 2,
       "file": "002.png",
-      "digit": 7,
-      "confidence": 0.927918678747956,
-      "score": 1316.789486533718,
+      "digit": 5,
+      "confidence": 0.7705539754184895,
+      "score": 3936.7151653955852,
       "hole_count": 0
     },
     {
       "index": 3,
       "file": "003.png",
-      "digit": 1,
-      "confidence": 0.7738158346683578,
-      "score": 3855.7187073982795,
+      "digit": 5,
+      "confidence": 0.7239940967316577,
+      "score": 4783.320577308614,
       "hole_count": 0
     },
     {
       "index": 4,
       "file": "004.png",
-      "digit": 5,
-      "confidence": 0.6457264183928471,
-      "score": 5992.598862813706,
-      "hole_count": 0
+      "digit": 8,
+      "confidence": 0.5752002202662041,
+      "score": 10109.940077383308,
+      "hole_count": 2
     },
     {
       "index": 5,
       "file": "005.png",
-      "digit": 1,
-      "confidence": 0.7197581429901437,
-      "score": 5062.770778763908,
+      "digit": 2,
+      "confidence": 0.5313276113375921,
+      "score": 7356.325750481593,
       "hole_count": 0
     },
     {
       "index": 6,
       "file": "006.png",
-      "digit": 5,
-      "confidence": 0.9362860002763007,
-      "score": 1144.1206233243238,
-      "hole_count": 0
+      "digit": 6,
+      "confidence": 0.5268097672869592,
+      "score": 9404.454963589891,
+      "hole_count": 1
     },
     {
       "index": 7,
       "file": "007.png",
-      "digit": 1,
-      "confidence": 0.7574354136342906,
-      "score": 4483.044545678344,
-      "hole_count": 0
+      "digit": 4,
+      "confidence": 0.9450533089525681,
+      "score": 1304.6626877328804,
+      "hole_count": 1
     },
     {
       "index": 8,
       "file": "008.png",
-      "digit": 9,
-      "confidence": 0.6721807898877108,
-      "score": 6339.303137012386,
-      "hole_count": 1
+      "digit": 1,
+      "confidence": 0.7909954055278918,
+      "score": 3918.562499588296,
+      "hole_count": 0
     },
     {
       "index": 9,
@@ -441,10 +441,10 @@
     {
       "index": 11,
       "file": "011.png",
-      "digit": 3,
-      "confidence": 0.7024470942512379,
-      "score": 4765.373824814619,
-      "hole_count": 0
+      "digit": 9,
+      "confidence": 0.8306017413458233,
+      "score": 3437.5601527202557,
+      "hole_count": 1
     },
     {
       "index": 12,
@@ -457,33 +457,33 @@
     {
       "index": 13,
       "file": "013.png",
-      "digit": 9,
-      "confidence": 0.5436613195697628,
-      "score": 8495.92179923222,
-      "hole_count": 1
+      "digit": 1,
+      "confidence": 0.7032634892574605,
+      "score": 5221.019873681007,
+      "hole_count": 0
     },
     {
       "index": 14,
       "file": "014.png",
-      "digit": 2,
-      "confidence": 0.48933682154845715,
-      "score": 8207.55321731984,
+      "digit": 3,
+      "confidence": 0.8571447160344825,
+      "score": 2279.378085177638,
       "hole_count": 0
     },
     {
       "index": 15,
       "file": "015.png",
-      "digit": 1,
-      "confidence": 0.7197581429901437,
-      "score": 5062.770778763908,
-      "hole_count": 0
+      "digit": 6,
+      "confidence": 0.4941920689068496,
+      "score": 9716.294962480508,
+      "hole_count": 1
     },
     {
       "index": 16,
       "file": "016.png",
-      "digit": 9,
-      "confidence": 0.4534118966625164,
-      "score": 10400.732995731312,
+      "digit": 4,
+      "confidence": 0.7023453124607243,
+      "score": 6983.561290101834,
       "hole_count": 1
     },
     {
@@ -497,34 +497,34 @@
     {
       "index": 18,
       "file": "018.png",
-      "digit": 8,
-      "confidence": 0.8830628880698881,
-      "score": 2811.5871924910907,
-      "hole_count": 2
+      "digit": 4,
+      "confidence": 0.8614593368500816,
+      "score": 3419.922415134126,
+      "hole_count": 1
     },
     {
       "index": 19,
       "file": "019.png",
-      "digit": 5,
-      "confidence": 0.9437920575437079,
-      "score": 1005.7991389112544,
-      "hole_count": 0
+      "digit": 8,
+      "confidence": 0.9153726555514204,
+      "score": 1976.291579710084,
+      "hole_count": 2
     },
     {
       "index": 20,
       "file": "020.png",
-      "digit": 5,
-      "confidence": 0.8670963898945019,
-      "score": 2218.477230177399,
-      "hole_count": 0
+      "digit": 6,
+      "confidence": 0.4332293153359368,
+      "score": 11066.439014668365,
+      "hole_count": 1
     },
     {
       "index": 21,
       "file": "021.png",
-      "digit": 6,
-      "confidence": 0.7098292224315879,
-      "score": 5809.871419270832,
-      "hole_count": 1
+      "digit": 5,
+      "confidence": 0.755465855119224,
+      "score": 4106.03624777819,
+      "hole_count": 0
     },
     {
       "index": 22,
@@ -537,138 +537,138 @@
     {
       "index": 23,
       "file": "023.png",
-      "digit": 4,
-      "confidence": 0.640256181955845,
-      "score": 8425.173966908114,
+      "digit": 6,
+      "confidence": 0.7640256341154457,
+      "score": 4883.071329305461,
       "hole_count": 1
     },
     {
       "index": 24,
       "file": "024.png",
-      "digit": 3,
-      "confidence": 0.5406573195241915,
-      "score": 6654.033948229505,
-      "hole_count": 0
+      "digit": 8,
+      "confidence": 0.6877121154873715,
+      "score": 7137.814386969247,
+      "hole_count": 2
     },
     {
       "index": 25,
       "file": "025.png",
-      "digit": 6,
-      "confidence": 0.9279337703479631,
-      "score": 1520.9455352817004,
-      "hole_count": 1
+      "digit": 8,
+      "confidence": 0.6586177903037203,
+      "score": 7524.076151802252,
+      "hole_count": 2
     },
     {
       "index": 26,
       "file": "026.png",
-      "digit": 5,
-      "confidence": 0.8514719103492555,
-      "score": 2644.2140684023016,
+      "digit": 3,
+      "confidence": 0.31729897460164713,
+      "score": 10872.863561938622,
       "hole_count": 0
     },
     {
       "index": 27,
       "file": "027.png",
       "digit": 3,
-      "confidence": 0.2997038798724404,
-      "score": 10920.189898409228,
+      "confidence": 0.3219342594023343,
+      "score": 10727.14729481508,
       "hole_count": 0
     },
     {
       "index": 28,
       "file": "028.png",
-      "digit": 5,
-      "confidence": 0.8569633178997957,
-      "score": 2466.532751632062,
+      "digit": 1,
+      "confidence": 0.7944348504940024,
+      "score": 3782.7897411281774,
       "hole_count": 0
     },
     {
       "index": 29,
       "file": "029.png",
       "digit": 1,
-      "confidence": 0.7102278246914818,
-      "score": 5305.58639886811,
+      "confidence": 0.7083182330542855,
+      "score": 5294.510860233517,
       "hole_count": 0
     },
     {
       "index": 30,
       "file": "030.png",
-      "digit": 7,
-      "confidence": 0.9840463422693766,
-      "score": 296.5937467229454,
+      "digit": 3,
+      "confidence": 0.44922598757235965,
+      "score": 8636.831572561554,
       "hole_count": 0
     },
     {
       "index": 31,
       "file": "031.png",
-      "digit": 5,
-      "confidence": 0.7524836092710472,
-      "score": 4161.526988065074,
+      "digit": 7,
+      "confidence": 0.811764139069074,
+      "score": 3321.198297316029,
       "hole_count": 0
     },
     {
       "index": 32,
       "file": "032.png",
-      "digit": 3,
-      "confidence": 0.5364544868309031,
-      "score": 6874.373372395833,
-      "hole_count": 0
+      "digit": 9,
+      "confidence": 0.6018365200485488,
+      "score": 7551.010840161503,
+      "hole_count": 1
     },
     {
       "index": 33,
       "file": "033.png",
-      "digit": 5,
-      "confidence": 0.7003826192415911,
-      "score": 4910.601845916786,
-      "hole_count": 0
+      "digit": 8,
+      "confidence": 0.8394688138705109,
+      "score": 3720.2017818494146,
+      "hole_count": 2
     },
     {
       "index": 34,
       "file": "034.png",
       "digit": 7,
-      "confidence": 0.6008914547255894,
-      "score": 7391.009273915878,
+      "confidence": 0.5643823146299016,
+      "score": 7704.115847127341,
       "hole_count": 0
     },
     {
       "index": 35,
       "file": "035.png",
-      "digit": 9,
-      "confidence": 0.5326003339145222,
-      "score": 8624.279125316723,
-      "hole_count": 1
+      "digit": 7,
+      "confidence": 0.5729344507336165,
+      "score": 7571.78955078125,
+      "hole_count": 0
     },
     {
       "index": 36,
       "file": "036.png",
-      "digit": 4,
-      "confidence": 0.6349520822343758,
-      "score": 8767.71269237353,
-      "hole_count": 1
+      "digit": 5,
+      "confidence": 0.8301414862695979,
+      "score": 3035.7444845220098,
+      "hole_count": 0
     },
     {
       "index": 37,
       "file": "037.png",
-      "digit": 1,
-      "confidence": 0.727291945700363,
-      "score": 4960.205695681388,
+      "digit": 5,
+      "confidence": 0.7978439043003591,
+      "score": 3548.8280593708,
       "hole_count": 0
     },
     {
       "index": 38,
       "file": "038.png",
-      "digit": 4,
-      "confidence": 0.6772836798751257,
-      "score": 7994.19422589508,
-      "hole_count": 1
+      "digit": 3,
+      "confidence": 0.42018902126997787,
+      "score": 9688.141426058202,
+      "hole_count": 0
     },
     {
       "index": 39,
       "file": "039.png",
-      "digit": 7,
-      "confidence": 0.757364311939209,
-      "score": 4689.249330991273,
-      "hole_count": 0
+      "digit": 9,
+      "confidence": 0.6900722291547258,
+      "score": 6395.5603903184565,
+      "hole_count": 1
     },
     {
       "index": 40,
@@ -681,10 +681,10 @@
     {
       "index": 41,
       "file": "041.png",
-      "digit": 6,
-      "confidence": 0.6345130446332535,
-      "score": 6864.733329497578,
-      "hole_count": 1
+      "digit": 5,
+      "confidence": 0.64631013974457,
+      "score": 5630.3042557439185,
+      "hole_count": 0
     },
     {
       "index": 42,
@@ -697,10 +697,10 @@
     {
       "index": 43,
       "file": "043.png",
-      "digit": 3,
-      "confidence": 0.53699286257008,
-      "score": 7478.974400653741,
-      "hole_count": 0
+      "digit": 6,
+      "confidence": 0.697438409861413,
+      "score": 5890.6817283465225,
+      "hole_count": 1
     },
     {
       "index": 44,
@@ -713,66 +713,66 @@
     {
       "index": 45,
       "file": "045.png",
-      "digit": 6,
-      "confidence": 0.7674985047455736,
-      "score": 4544.857347526589,
-      "hole_count": 1
+      "digit": 2,
+      "confidence": 0.49562011468504696,
+      "score": 7954.5495829450965,
+      "hole_count": 0
     },
     {
       "index": 46,
       "file": "046.png",
-      "digit": 1,
-      "confidence": 0.723352134205729,
-      "score": 5091.525985410548,
-      "hole_count": 0
+      "digit": 6,
+      "confidence": 0.7826553575209239,
+      "score": 4352.073074048007,
+      "hole_count": 1
     },
     {
       "index": 47,
       "file": "047.png",
-      "digit": 9,
-      "confidence": 0.4898476324377795,
-      "score": 9997.030251581575,
-      "hole_count": 1
+      "digit": 5,
+      "confidence": 0.674654378120756,
+      "score": 5543.665535219254,
+      "hole_count": 0
     },
     {
       "index": 48,
       "file": "048.png",
-      "digit": 7,
-      "confidence": 0.6100248575076257,
-      "score": 7014.898868292479,
+      "digit": 2,
+      "confidence": 0.58032345777477,
+      "score": 6691.922665017305,
       "hole_count": 0
     },
     {
       "index": 49,
       "file": "049.png",
-      "digit": 6,
-      "confidence": 0.5632963264480786,
-      "score": 7773.036165296908,
-      "hole_count": 1
+      "digit": 2,
+      "confidence": 0.5613027409678398,
+      "score": 6854.680501728158,
+      "hole_count": 0
     },
     {
       "index": 50,
       "file": "050.png",
-      "digit": 5,
-      "confidence": 0.6458709912540248,
-      "score": 5634.504406861585,
-      "hole_count": 0
+      "digit": 4,
+      "confidence": 0.6500209682729733,
+      "score": 8715.410917754456,
+      "hole_count": 1
     },
     {
       "index": 51,
       "file": "051.png",
-      "digit": 6,
-      "confidence": 0.5139410142541873,
-      "score": 9490.464059930098,
+      "digit": 9,
+      "confidence": 0.658529952569493,
+      "score": 6535.851726700774,
       "hole_count": 1
     },
     {
       "index": 52,
       "file": "052.png",
-      "digit": 5,
-      "confidence": 0.5191431191782717,
-      "score": 8263.180346559422,
-      "hole_count": 0
+      "digit": 8,
+      "confidence": 0.6664839139975076,
+      "score": 7675.781840662802,
+      "hole_count": 2
     },
     {
       "index": 53,
@@ -785,361 +785,361 @@
     {
       "index": 54,
       "file": "054.png",
-      "digit": 7,
-      "confidence": 0.5729033910678447,
-      "score": 7635.29052734375,
-      "hole_count": 0
+      "digit": 6,
+      "confidence": 0.7686267306871438,
+      "score": 4538.059102853477,
+      "hole_count": 1
     },
     {
       "index": 55,
       "file": "055.png",
-      "digit": 6,
-      "confidence": 0.7528141391866922,
-      "score": 4914.357944886475,
-      "hole_count": 1
+      "digit": 3,
+      "confidence": 0.3341262731700219,
+      "score": 11735.288377677869,
+      "hole_count": 0
     },
     {
       "index": 56,
       "file": "056.png",
-      "digit": 9,
-      "confidence": 0.5210486708798608,
-      "score": 9012.74925297142,
+      "digit": 6,
+      "confidence": 0.7497564835215292,
+      "score": 5003.327450509799,
       "hole_count": 1
     },
     {
       "index": 57,
       "file": "057.png",
-      "digit": 4,
-      "confidence": 0.6682066652437633,
-      "score": 8360.772440828769,
-      "hole_count": 1
+      "digit": 5,
+      "confidence": 0.5560986393506115,
+      "score": 7496.663123041886,
+      "hole_count": 0
     },
     {
       "index": 58,
       "file": "058.png",
-      "digit": 3,
-      "confidence": 0.46764556931569035,
-      "score": 8369.854022930194,
-      "hole_count": 0
+      "digit": 6,
+      "confidence": 0.5207602164619148,
+      "score": 8463.758060634747,
+      "hole_count": 1
     },
     {
       "index": 59,
       "file": "059.png",
-      "digit": 2,
-      "confidence": 0.6007677217095669,
-      "score": 6208.727788614326,
-      "hole_count": 0
+      "digit": 9,
+      "confidence": 0.7061593951513614,
+      "score": 5803.445117643305,
+      "hole_count": 1
     },
     {
       "index": 60,
       "file": "060.png",
-      "digit": 2,
-      "confidence": 0.5755753909632567,
-      "score": 6596.25752635329,
-      "hole_count": 0
+      "digit": 9,
+      "confidence": 0.7113163181368458,
+      "score": 5591.534961740784,
+      "hole_count": 1
     },
     {
       "index": 61,
       "file": "061.png",
-      "digit": 5,
-      "confidence": 0.5339426712878937,
-      "score": 7742.664545922729,
+      "digit": 2,
+      "confidence": 0.6078577458024628,
+      "score": 5902.799603728211,
       "hole_count": 0
     },
     {
       "index": 62,
       "file": "062.png",
-      "digit": 5,
-      "confidence": 0.5418398729339734,
-      "score": 7555.805627164674,
+      "digit": 2,
+      "confidence": 0.6021827873638396,
+      "score": 5885.060600385274,
       "hole_count": 0
     },
     {
       "index": 63,
       "file": "063.png",
-      "digit": 8,
-      "confidence": 0.6691300820196199,
-      "score": 7784.927978515624,
-      "hole_count": 2
+      "digit": 2,
+      "confidence": 0.6059489938877519,
+      "score": 5874.880197660519,
+      "hole_count": 0
     },
     {
       "index": 64,
       "file": "064.png",
-      "digit": 7,
-      "confidence": 0.5729033910678447,
-      "score": 7635.29052734375,
-      "hole_count": 0
+      "digit": 9,
+      "confidence": 0.5777529508246934,
+      "score": 7481.670482554697,
+      "hole_count": 1
     },
     {
       "index": 65,
       "file": "065.png",
-      "digit": 2,
-      "confidence": 0.6425419217845343,
-      "score": 5371.939392916878,
-      "hole_count": 0
+      "digit": 4,
+      "confidence": 0.6828799749913084,
+      "score": 7990.826757606257,
+      "hole_count": 1
     },
     {
       "index": 66,
       "file": "066.png",
-      "digit": 1,
-      "confidence": 0.666425866983974,
-      "score": 6319.429672948573,
+      "digit": 7,
+      "confidence": 0.5743673103697585,
+      "score": 7550.749692154506,
       "hole_count": 0
     },
     {
       "index": 67,
       "file": "067.png",
-      "digit": 3,
-      "confidence": 0.516821497123443,
-      "score": 7870.374455083245,
-      "hole_count": 0
-    },
-    {
-      "index": 68,
-      "file": "068.png",
-      "digit": 1,
-      "confidence": 0.6676211572190209,
-      "score": 6623.927010145762,
-      "hole_count": 0
-    },
-    {
-      "index": 69,
-      "file": "069.png",
-      "digit": 8,
-      "confidence": 0.732322088119884,
-      "score": 6389.548586727527,
-      "hole_count": 2
-    },
-    {
-      "index": 70,
-      "file": "070.png",
-      "digit": 7,
-      "confidence": 0.7858948284254039,
-      "score": 3698.836866312599,
-      "hole_count": 0
-    },
-    {
-      "index": 71,
-      "file": "071.png",
-      "digit": 3,
-      "confidence": 0.6463668866525497,
-      "score": 5806.658637410428,
-      "hole_count": 0
-    },
-    {
-      "index": 72,
-      "file": "072.png",
-      "digit": 3,
-      "confidence": 0.6339699275149137,
-      "score": 5874.880197660519,
-      "hole_count": 0
-    },
-    {
-      "index": 73,
-      "file": "073.png",
-      "digit": 6,
-      "confidence": 0.5839623297652274,
-      "score": 7990.826757606257,
-      "hole_count": 1
-    },
-    {
-      "index": 74,
-      "file": "074.png",
-      "digit": 9,
-      "confidence": 0.5646877628002521,
-      "score": 7661.044079361045,
-      "hole_count": 1
-    },
-    {
-      "index": 75,
-      "file": "075.png",
-      "digit": 6,
-      "confidence": 0.6534685244671151,
-      "score": 6966.842968391347,
-      "hole_count": 1
-    },
-    {
-      "index": 76,
-      "file": "076.png",
       "digit": 2,
       "confidence": 0.5985989953196488,
       "score": 6244.272974917764,
       "hole_count": 0
     },
     {
+      "index": 68,
+      "file": "068.png",
+      "digit": 7,
+      "confidence": 0.7234103580694063,
+      "score": 4948.150634765625,
+      "hole_count": 0
+    },
+    {
+      "index": 69,
+      "file": "069.png",
+      "digit": 3,
+      "confidence": 0.5101975029428922,
+      "score": 7740.044182357889,
+      "hole_count": 0
+    },
+    {
+      "index": 70,
+      "file": "070.png",
+      "digit": 9,
+      "confidence": 0.7782644614992459,
+      "score": 4356.004020356058,
+      "hole_count": 1
+    },
+    {
+      "index": 71,
+      "file": "071.png",
+      "digit": 2,
+      "confidence": 0.5762775989770813,
+      "score": 6450.8531404021605,
+      "hole_count": 0
+    },
+    {
+      "index": 72,
+      "file": "072.png",
+      "digit": 5,
+      "confidence": 0.7257469274570637,
+      "score": 5096.757559388328,
+      "hole_count": 0
+    },
+    {
+      "index": 73,
+      "file": "073.png",
+      "digit": 8,
+      "confidence": 0.6478073007553861,
+      "score": 8402.650563901747,
+      "hole_count": 2
+    },
+    {
+      "index": 74,
+      "file": "074.png",
+      "digit": 6,
+      "confidence": 0.6408633857929178,
+      "score": 7015.487584978248,
+      "hole_count": 1
+    },
+    {
+      "index": 75,
+      "file": "075.png",
+      "digit": 2,
+      "confidence": 0.5642840612288181,
+      "score": 6851.842390939772,
+      "hole_count": 0
+    },
+    {
+      "index": 76,
+      "file": "076.png",
+      "digit": 5,
+      "confidence": 0.8249445641009723,
+      "score": 3320.486441879897,
+      "hole_count": 0
+    },
+    {
       "index": 77,
       "file": "077.png",
-      "digit": 2,
-      "confidence": 0.5935080988643658,
-      "score": 6323.4679614354045,
+      "digit": 1,
+      "confidence": 0.6593997398475427,
+      "score": 6422.590614949479,
       "hole_count": 0
     },
     {
       "index": 78,
       "file": "078.png",
-      "digit": 4,
-      "confidence": 0.8891173173961618,
-      "score": 2708.4340934498546,
+      "digit": 9,
+      "confidence": 0.5967047217384112,
+      "score": 7860.761172468491,
       "hole_count": 1
     },
     {
       "index": 79,
       "file": "079.png",
-      "digit": 4,
-      "confidence": 0.883133501935214,
-      "score": 2899.168888763225,
-      "hole_count": 1
+      "digit": 3,
+      "confidence": 0.5390349640438248,
+      "score": 7608.646064687187,
+      "hole_count": 0
     },
     {
       "index": 80,
       "file": "080.png",
-      "digit": 7,
-      "confidence": 0.8493144310409152,
-      "score": 2803.881043273132,
+      "digit": 3,
+      "confidence": 0.584607848154748,
+      "score": 6843.5308179588665,
       "hole_count": 0
     },
     {
       "index": 81,
       "file": "081.png",
-      "digit": 6,
-      "confidence": 0.5304072803492477,
-      "score": 9252.262354847768,
-      "hole_count": 1
+      "digit": 8,
+      "confidence": 0.7157125369567798,
+      "score": 6788.895373398,
+      "hole_count": 2
     },
     {
       "index": 82,
       "file": "082.png",
-      "digit": 5,
-      "confidence": 0.7287732163603186,
-      "score": 4836.124280360356,
+      "digit": 7,
+      "confidence": 0.9685035075263884,
+      "score": 593.1874934458887,
       "hole_count": 0
     },
     {
       "index": 83,
       "file": "083.png",
-      "digit": 9,
-      "confidence": 0.6961359286492206,
-      "score": 5552.7747957271695,
-      "hole_count": 1
+      "digit": 1,
+      "confidence": 0.6124978360783341,
+      "score": 7021.661376953125,
+      "hole_count": 0
     },
     {
       "index": 84,
       "file": "084.png",
-      "digit": 9,
-      "confidence": 0.6035155208540223,
-      "score": 7075.622626865737,
+      "digit": 4,
+      "confidence": 0.693694101791306,
+      "score": 7352.8881922864475,
       "hole_count": 1
     },
     {
       "index": 85,
       "file": "085.png",
-      "digit": 6,
-      "confidence": 0.5390148737873689,
-      "score": 8946.689561773968,
+      "digit": 9,
+      "confidence": 0.592890534794835,
+      "score": 7209.775262845386,
       "hole_count": 1
     },
     {
       "index": 86,
       "file": "086.png",
-      "digit": 8,
-      "confidence": 0.6578598789678337,
-      "score": 8161.122607807869,
-      "hole_count": 2
-    },
-    {
-      "index": 87,
-      "file": "087.png",
-      "digit": 6,
-      "confidence": 0.5275203572466122,
-      "score": 9406.362614606947,
-      "hole_count": 1
-    },
-    {
-      "index": 88,
-      "file": "088.png",
-      "digit": 6,
-      "confidence": 0.4517204305014479,
-      "score": 9710.001905097337,
-      "hole_count": 1
-    },
-    {
-      "index": 89,
-      "file": "089.png",
-      "digit": 8,
-      "confidence": 0.7222779233050284,
-      "score": 6647.500966077934,
-      "hole_count": 2
-    },
-    {
-      "index": 90,
-      "file": "090.png",
-      "digit": 3,
-      "confidence": 0.6460709949475024,
-      "score": 5826.650455573733,
-      "hole_count": 0
-    },
-    {
-      "index": 91,
-      "file": "091.png",
-      "digit": 6,
-      "confidence": 0.4919220613246313,
-      "score": 9713.011019837624,
-      "hole_count": 1
-    },
-    {
-      "index": 92,
-      "file": "092.png",
-      "digit": 2,
-      "confidence": 0.6159938919781153,
-      "score": 6393.251979807035,
-      "hole_count": 0
-    },
-    {
-      "index": 93,
-      "file": "093.png",
-      "digit": 6,
-      "confidence": 0.5293327504315025,
-      "score": 8724.30782163046,
-      "hole_count": 1
-    },
-    {
-      "index": 94,
-      "file": "094.png",
       "digit": 1,
       "confidence": 0.6376684676163042,
       "score": 6794.144480370936,
       "hole_count": 0
     },
     {
+      "index": 87,
+      "file": "087.png",
+      "digit": 9,
+      "confidence": 0.6528214372210327,
+      "score": 6886.866441284868,
+      "hole_count": 1
+    },
+    {
+      "index": 88,
+      "file": "088.png",
+      "digit": 1,
+      "confidence": 0.6583841826974893,
+      "score": 6505.031949291321,
+      "hole_count": 0
+    },
+    {
+      "index": 89,
+      "file": "089.png",
+      "digit": 5,
+      "confidence": 0.8199987809764047,
+      "score": 3400.8834175441575,
+      "hole_count": 0
+    },
+    {
+      "index": 90,
+      "file": "090.png",
+      "digit": 7,
+      "confidence": 0.8648057841492084,
+      "score": 2530.430728099386,
+      "hole_count": 0
+    },
+    {
+      "index": 91,
+      "file": "091.png",
+      "digit": 2,
+      "confidence": 0.603140031125766,
+      "score": 6554.726482672002,
+      "hole_count": 0
+    },
+    {
+      "index": 92,
+      "file": "092.png",
+      "digit": 3,
+      "confidence": 0.7338712220826299,
+      "score": 4535.90749880808,
+      "hole_count": 0
+    },
+    {
+      "index": 93,
+      "file": "093.png",
+      "digit": 4,
+      "confidence": 0.7502261595369268,
+      "score": 6127.295630969648,
+      "hole_count": 1
+    },
+    {
+      "index": 94,
+      "file": "094.png",
+      "digit": 8,
+      "confidence": 0.5803332178358365,
+      "score": 10437.684878423239,
+      "hole_count": 2
+    },
+    {
       "index": 95,
       "file": "095.png",
-      "digit": 5,
-      "confidence": 0.6135127665473015,
-      "score": 6846.74831849329,
+      "digit": 7,
+      "confidence": 0.7032520882837108,
+      "score": 5325.152587890624,
       "hole_count": 0
     },
     {
       "index": 96,
       "file": "096.png",
-      "digit": 9,
-      "confidence": 0.6556670899390789,
-      "score": 6800.899047163455,
-      "hole_count": 1
+      "digit": 3,
+      "confidence": 0.44551690793677273,
+      "score": 9541.19091546795,
+      "hole_count": 0
     },
     {
       "index": 97,
       "file": "097.png",
-      "digit": 2,
-      "confidence": 0.5919191760666787,
-      "score": 6618.229332073594,
+      "digit": 1,
+      "confidence": 0.6376684676163042,
+      "score": 6794.144480370936,
       "hole_count": 0
     },
     {
       "index": 98,
       "file": "098.png",
-      "digit": 3,
-      "confidence": 0.5387445581449669,
-      "score": 7959.524885257191,
+      "digit": 5,
+      "confidence": 0.8921171264547265,
+      "score": 1953.8602429007676,
       "hole_count": 0
     },
     {
@@ -1153,33 +1153,33 @@
     {
       "index": 100,
       "file": "100.png",
-      "digit": 6,
-      "confidence": 0.48331957463679404,
-      "score": 9841.871473524305,
-      "hole_count": 1
+      "digit": 1,
+      "confidence": 0.7135078781941312,
+      "score": 4748.10925817197,
+      "hole_count": 0
     },
     {
       "index": 101,
       "file": "101.png",
-      "digit": 7,
-      "confidence": 1.0,
-      "score": 0.0,
+      "digit": 5,
+      "confidence": 0.7817844015094093,
+      "score": 3767.3940830129786,
       "hole_count": 0
     },
     {
       "index": 102,
       "file": "102.png",
-      "digit": 8,
-      "confidence": 0.660406364444095,
-      "score": 8295.382684362574,
-      "hole_count": 2
+      "digit": 5,
+      "confidence": 0.7337579017361429,
+      "score": 4538.055778952206,
+      "hole_count": 0
     },
     {
       "index": 103,
       "file": "103.png",
-      "digit": 6,
-      "confidence": 0.49376138818376275,
-      "score": 10419.0792214734,
+      "digit": 9,
+      "confidence": 0.7333302666999606,
+      "score": 5076.075508225133,
       "hole_count": 1
     },
     {
@@ -1193,17 +1193,17 @@
     {
       "index": 105,
       "file": "105.png",
-      "digit": 9,
-      "confidence": 0.644979821832437,
-      "score": 6557.363377260357,
-      "hole_count": 1
+      "digit": 7,
+      "confidence": 0.7016142083643533,
+      "score": 5489.327062450864,
+      "hole_count": 0
     },
     {
       "index": 106,
       "file": "106.png",
-      "digit": 9,
-      "confidence": 0.6883478332346733,
-      "score": 6117.384157342427,
+      "digit": 6,
+      "confidence": 0.5412797296081479,
+      "score": 9175.09951111717,
       "hole_count": 1
     },
     {
@@ -1217,9 +1217,9 @@
     {
       "index": 108,
       "file": "108.png",
-      "digit": 4,
-      "confidence": 0.8902081391988368,
-      "score": 2686.0702394500486,
+      "digit": 6,
+      "confidence": 0.43218890805089044,
+      "score": 9946.083511844758,
       "hole_count": 1
     },
     {
@@ -1233,50 +1233,50 @@
     {
       "index": 110,
       "file": "110.png",
-      "digit": 9,
-      "confidence": 0.9167259656346336,
-      "score": 1658.2560171366324,
-      "hole_count": 1
+      "digit": 2,
+      "confidence": 0.6908947249408213,
+      "score": 4432.920846222454,
+      "hole_count": 0
     },
     {
       "index": 111,
       "file": "111.png",
-      "digit": 5,
-      "confidence": 0.7938119963614516,
-      "score": 3513.4124594390705,
+      "digit": 3,
+      "confidence": 0.7147729816965613,
+      "score": 4500.630834547139,
       "hole_count": 0
     },
     {
       "index": 112,
       "file": "112.png",
-      "digit": 8,
-      "confidence": 0.6537111506548159,
-      "score": 8672.148403388535,
-      "hole_count": 2
+      "digit": 5,
+      "confidence": 0.7705539754184895,
+      "score": 3936.7151653955852,
+      "hole_count": 0
     },
     {
       "index": 113,
       "file": "113.png",
-      "digit": 5,
-      "confidence": 0.7169098953209012,
-      "score": 4936.350932874177,
-      "hole_count": 0
+      "digit": 9,
+      "confidence": 0.7176992857751918,
+      "score": 5469.56973366894,
+      "hole_count": 1
     },
     {
       "index": 114,
       "file": "114.png",
-      "digit": 8,
-      "confidence": 0.5649438471157134,
-      "score": 10534.133367343446,
-      "hole_count": 2
+      "digit": 4,
+      "confidence": 0.95203921037612,
+      "score": 1150.414627589536,
+      "hole_count": 1
     },
     {
       "index": 115,
       "file": "115.png",
-      "digit": 3,
-      "confidence": 0.9356918629688709,
-      "score": 1001.1072229456023,
-      "hole_count": 0
+      "digit": 4,
+      "confidence": 0.9585448112569224,
+      "score": 999.6637968661825,
+      "hole_count": 1
     },
     {
       "index": 116,
@@ -1289,113 +1289,113 @@
     {
       "index": 117,
       "file": "117.png",
-      "digit": 4,
-      "confidence": 0.9450533089525681,
-      "score": 1304.6626877328804,
-      "hole_count": 1
+      "digit": 1,
+      "confidence": 0.7762529181419633,
+      "score": 4081.4310364804032,
+      "hole_count": 0
     },
     {
       "index": 118,
       "file": "118.png",
-      "digit": 4,
-      "confidence": 0.8902081391988368,
-      "score": 2686.0702394500486,
-      "hole_count": 1
+      "digit": 2,
+      "confidence": 0.6921972148540178,
+      "score": 4530.935890087183,
+      "hole_count": 0
     },
     {
       "index": 119,
       "file": "119.png",
-      "digit": 2,
-      "confidence": 0.6919384238708172,
-      "score": 4548.006072197293,
-      "hole_count": 0
+      "digit": 9,
+      "confidence": 0.9590023387749808,
+      "score": 815.0173206234452,
+      "hole_count": 1
     },
     {
       "index": 120,
       "file": "120.png",
-      "digit": 2,
-      "confidence": 0.7063369491699767,
-      "score": 4376.155991582146,
+      "digit": 5,
+      "confidence": 0.9163130183523518,
+      "score": 1443.1031123509308,
       "hole_count": 0
     },
     {
       "index": 121,
       "file": "121.png",
-      "digit": 4,
-      "confidence": 0.7606617347514129,
-      "score": 6007.734864362714,
+      "digit": 6,
+      "confidence": 0.4211564561310656,
+      "score": 11538.201232971744,
       "hole_count": 1
     },
     {
       "index": 122,
       "file": "122.png",
-      "digit": 2,
-      "confidence": 0.9115569120742767,
-      "score": 1382.601735094882,
+      "digit": 3,
+      "confidence": 0.718499508265928,
+      "score": 4444.667271205359,
       "hole_count": 0
     },
     {
       "index": 123,
       "file": "123.png",
-      "digit": 7,
-      "confidence": 0.5822787381964939,
-      "score": 7735.694352970567,
+      "digit": 3,
+      "confidence": 0.7804478371924958,
+      "score": 3377.9471261160706,
       "hole_count": 0
     },
     {
       "index": 124,
       "file": "124.png",
-      "digit": 2,
-      "confidence": 0.48933682154845715,
-      "score": 8207.55321731984,
+      "digit": 5,
+      "confidence": 0.6940152394099268,
+      "score": 5256.656826478649,
       "hole_count": 0
     },
     {
       "index": 125,
       "file": "125.png",
-      "digit": 8,
-      "confidence": 0.6432287302309085,
-      "score": 8721.781954492573,
-      "hole_count": 2
+      "digit": 3,
+      "confidence": 0.9099819798113029,
+      "score": 1403.8972742417268,
+      "hole_count": 0
     },
     {
       "index": 126,
       "file": "126.png",
-      "digit": 6,
-      "confidence": 0.5095184371975083,
-      "score": 9693.235884232954,
-      "hole_count": 1
+      "digit": 7,
+      "confidence": 0.6086202840199557,
+      "score": 7404.84147018603,
+      "hole_count": 0
     },
     {
       "index": 127,
       "file": "127.png",
-      "digit": 4,
-      "confidence": 0.9477856384261656,
-      "score": 1273.8830566406245,
-      "hole_count": 1
+      "digit": 8,
+      "confidence": 0.6474163307324166,
+      "score": 8792.980174529246,
+      "hole_count": 2
     },
     {
       "index": 128,
       "file": "128.png",
-      "digit": 8,
-      "confidence": 0.670097759495448,
-      "score": 7660.197453406298,
-      "hole_count": 2
+      "digit": 5,
+      "confidence": 0.8889692569583443,
+      "score": 1957.4799089800595,
+      "hole_count": 0
     },
     {
       "index": 129,
       "file": "129.png",
-      "digit": 1,
-      "confidence": 0.7102278246914818,
-      "score": 5305.58639886811,
+      "digit": 5,
+      "confidence": 0.8569633178997957,
+      "score": 2466.532751632062,
       "hole_count": 0
     },
     {
       "index": 130,
       "file": "130.png",
-      "digit": 9,
-      "confidence": 0.8643585020624894,
-      "score": 2709.833003613521,
+      "digit": 4,
+      "confidence": 0.8067467370720756,
+      "score": 4882.810760022272,
       "hole_count": 1
     },
     {
@@ -1409,34 +1409,34 @@
     {
       "index": 132,
       "file": "132.png",
-      "digit": 8,
-      "confidence": 0.9017071876827314,
-      "score": 2303.4140728889633,
-      "hole_count": 2
+      "digit": 2,
+      "confidence": 0.9115569120742767,
+      "score": 1382.601735094882,
+      "hole_count": 0
     },
     {
       "index": 133,
       "file": "133.png",
-      "digit": 3,
-      "confidence": 0.5459716156129165,
-      "score": 6655.270201515339,
+      "digit": 1,
+      "confidence": 0.7206876102409051,
+      "score": 4920.857747395832,
       "hole_count": 0
     },
     {
       "index": 134,
       "file": "134.png",
-      "digit": 9,
-      "confidence": 0.5251260585603307,
-      "score": 8822.77338063084,
-      "hole_count": 1
+      "digit": 1,
+      "confidence": 0.7254529250018135,
+      "score": 4948.868951877625,
+      "hole_count": 0
     },
     {
       "index": 135,
       "file": "135.png",
-      "digit": 7,
-      "confidence": 0.6049936033111365,
-      "score": 7350.252747159651,
-      "hole_count": 0
+      "digit": 6,
+      "confidence": 0.8946772403158486,
+      "score": 2216.465868505117,
+      "hole_count": 1
     },
     {
       "index": 136,
@@ -1449,106 +1449,106 @@
     {
       "index": 137,
       "file": "137.png",
-      "digit": 3,
-      "confidence": 0.35852031939944423,
-      "score": 10325.381243533091,
+      "digit": 1,
+      "confidence": 0.727291945700363,
+      "score": 4960.205695681388,
       "hole_count": 0
     },
     {
       "index": 138,
       "file": "138.png",
+      "digit": 6,
+      "confidence": 0.6037729057665027,
+      "score": 7207.681602868665,
+      "hole_count": 1
+    },
+    {
+      "index": 139,
+      "file": "139.png",
+      "digit": 9,
+      "confidence": 0.6841333245993624,
+      "score": 6455.2376883370525,
+      "hole_count": 1
+    },
+    {
+      "index": 140,
+      "file": "140.png",
+      "digit": 1,
+      "confidence": 0.7162682060255503,
+      "score": 5105.421186653748,
+      "hole_count": 0
+    },
+    {
+      "index": 141,
+      "file": "141.png",
+      "digit": 9,
+      "confidence": 0.6476567336042238,
+      "score": 6851.441167475103,
+      "hole_count": 1
+    },
+    {
+      "index": 142,
+      "file": "142.png",
+      "digit": 6,
+      "confidence": 0.7141506182619987,
+      "score": 5642.15618631114,
+      "hole_count": 1
+    },
+    {
+      "index": 143,
+      "file": "143.png",
+      "digit": 2,
+      "confidence": 0.455767263013122,
+      "score": 8842.965463491586,
+      "hole_count": 0
+    },
+    {
+      "index": 144,
+      "file": "144.png",
+      "digit": 4,
+      "confidence": 0.6431801885636266,
+      "score": 8454.107770349226,
+      "hole_count": 1
+    },
+    {
+      "index": 145,
+      "file": "145.png",
+      "digit": 7,
+      "confidence": 0.5589531336498675,
+      "score": 7727.153613429664,
+      "hole_count": 0
+    },
+    {
+      "index": 146,
+      "file": "146.png",
+      "digit": 7,
+      "confidence": 0.5768618111417133,
+      "score": 7471.94484099177,
+      "hole_count": 0
+    },
+    {
+      "index": 147,
+      "file": "147.png",
+      "digit": 6,
+      "confidence": 0.7528700938800533,
+      "score": 5086.901215015903,
+      "hole_count": 1
+    },
+    {
+      "index": 148,
+      "file": "148.png",
       "digit": 9,
       "confidence": 0.39289024246985066,
       "score": 10838.658605831186,
       "hole_count": 1
     },
     {
-      "index": 139,
-      "file": "139.png",
-      "digit": 3,
-      "confidence": 0.42018902126997787,
-      "score": 9688.141426058202,
-      "hole_count": 0
-    },
-    {
-      "index": 140,
-      "file": "140.png",
-      "digit": 9,
-      "confidence": 0.6647847121457955,
-      "score": 6717.202981102546,
-      "hole_count": 1
-    },
-    {
-      "index": 141,
-      "file": "141.png",
-      "digit": 8,
-      "confidence": 0.8750423496197491,
-      "score": 3009.299030709775,
-      "hole_count": 2
-    },
-    {
-      "index": 142,
-      "file": "142.png",
-      "digit": 5,
-      "confidence": 0.6718176400869448,
-      "score": 5244.076419385194,
-      "hole_count": 0
-    },
-    {
-      "index": 143,
-      "file": "143.png",
-      "digit": 3,
-      "confidence": 0.550627314845397,
-      "score": 6750.565378289473,
-      "hole_count": 0
-    },
-    {
-      "index": 144,
-      "file": "144.png",
-      "digit": 7,
-      "confidence": 0.5643823146299016,
-      "score": 7704.115847127341,
-      "hole_count": 0
-    },
-    {
-      "index": 145,
-      "file": "145.png",
-      "digit": 8,
-      "confidence": 0.6852541371035126,
-      "score": 7181.628113962224,
-      "hole_count": 2
-    },
-    {
-      "index": 146,
-      "file": "146.png",
-      "digit": 1,
-      "confidence": 0.723352134205729,
-      "score": 5091.525985410548,
-      "hole_count": 0
-    },
-    {
-      "index": 147,
-      "file": "147.png",
-      "digit": 7,
-      "confidence": 0.570115061784974,
-      "score": 7471.94484099177,
-      "hole_count": 0
-    },
-    {
-      "index": 148,
-      "file": "148.png",
-      "digit": 8,
-      "confidence": 0.8830944265996815,
-      "score": 2865.93702188042,
-      "hole_count": 2
-    },
-    {
       "index": 149,
       "file": "149.png",
-      "digit": 2,
-      "confidence": 0.553821391732534,
-      "score": 7089.695920782574,
-      "hole_count": 0
+      "digit": 4,
+      "confidence": 0.8545267864229854,
+      "score": 3707.4964470037544,
+      "hole_count": 1
     },
     {
       "index": 150,
@@ -1561,81 +1561,81 @@
     {
       "index": 151,
       "file": "151.png",
-      "digit": 3,
-      "confidence": 0.4965574230017353,
-      "score": 7996.500483247423,
-      "hole_count": 0
+      "digit": 9,
+      "confidence": 0.658529952569493,
+      "score": 6535.851726700774,
+      "hole_count": 1
     },
     {
       "index": 152,
       "file": "152.png",
-      "digit": 2,
-      "confidence": 0.4690923993594876,
-      "score": 8643.535782805586,
+      "digit": 7,
+      "confidence": 0.7912838043037329,
+      "score": 3600.219342089076,
       "hole_count": 0
     },
     {
       "index": 153,
       "file": "153.png",
-      "digit": 1,
-      "confidence": 0.7342648528053481,
-      "score": 4696.067656446623,
+      "digit": 3,
+      "confidence": 0.53699286257008,
+      "score": 7478.974400653741,
       "hole_count": 0
     },
     {
       "index": 154,
       "file": "154.png",
-      "digit": 5,
-      "confidence": 0.5271511817815723,
-      "score": 7926.448674265853,
-      "hole_count": 0
+      "digit": 8,
+      "confidence": 0.6806772049124187,
+      "score": 7313.622623101495,
+      "hole_count": 2
     },
     {
       "index": 155,
       "file": "155.png",
-      "digit": 4,
-      "confidence": 0.5205402630242216,
-      "score": 12274.18573712662,
-      "hole_count": 1
+      "digit": 5,
+      "confidence": 0.5253694596987062,
+      "score": 7840.533559600268,
+      "hole_count": 0
     },
     {
       "index": 156,
       "file": "156.png",
-      "digit": 1,
-      "confidence": 0.723352134205729,
-      "score": 5091.525985410548,
-      "hole_count": 0
+      "digit": 8,
+      "confidence": 0.6563090380053836,
+      "score": 7770.724037045338,
+      "hole_count": 2
     },
     {
       "index": 157,
       "file": "157.png",
-      "digit": 9,
-      "confidence": 0.4898476324377795,
-      "score": 9997.030251581575,
-      "hole_count": 1
+      "digit": 8,
+      "confidence": 0.6318465893584932,
+      "score": 8394.654217037545,
+      "hole_count": 2
     },
     {
       "index": 158,
       "file": "158.png",
-      "digit": 2,
-      "confidence": 0.5889390137189139,
-      "score": 6455.204264322918,
-      "hole_count": 0
+      "digit": 4,
+      "confidence": 0.705401576066794,
+      "score": 7261.7357924502385,
+      "hole_count": 1
     },
     {
       "index": 159,
       "file": "159.png",
-      "digit": 5,
-      "confidence": 0.6953225640610373,
-      "score": 4999.784948140307,
+      "digit": 7,
+      "confidence": 0.7295669699018997,
+      "score": 4948.150634765625,
       "hole_count": 0
     },
     {
       "index": 160,
       "file": "160.png",
-      "digit": 2,
-      "confidence": 0.5755753909632567,
-      "score": 6596.25752635329,
+      "digit": 5,
+      "confidence": 0.6650649682481182,
+      "score": 5371.114268854035,
       "hole_count": 0
     }
   ],
@@ -1645,8 +1645,8 @@
       "index": 1,
       "file": "001.png",
       "bbox": [
-        7,
-        10,
+        17,
+        22,
         48,
         49
       ],
@@ -1656,8 +1656,8 @@
       "index": 2,
       "file": "002.png",
       "bbox": [
-        70,
-        10,
+        80,
+        22,
         48,
         49
       ],
@@ -1667,8 +1667,8 @@
       "index": 3,
       "file": "003.png",
       "bbox": [
-        133,
-        10,
+        143,
+        22,
         48,
         49
       ],
@@ -1678,8 +1678,8 @@
       "index": 4,
       "file": "004.png",
       "bbox": [
-        196,
-        10,
+        206,
+        22,
         48,
         49
       ],
@@ -1689,8 +1689,8 @@
       "index": 5,
       "file": "005.png",
       "bbox": [
-        259,
-        10,
+        269,
+        22,
         48,
         49
       ],
@@ -1700,8 +1700,8 @@
       "index": 6,
       "file": "006.png",
       "bbox": [
-        322,
-        10,
+        332,
+        22,
         48,
         49
       ],
@@ -1711,8 +1711,8 @@
       "index": 7,
       "file": "007.png",
       "bbox": [
-        385,
-        10,
+        395,
+        22,
         48,
         49
       ],
@@ -1722,8 +1722,8 @@
       "index": 8,
       "file": "008.png",
       "bbox": [
-        448,
-        10,
+        458,
+        22,
         48,
         49
       ],
@@ -1733,8 +1733,8 @@
       "index": 9,
       "file": "009.png",
       "bbox": [
-        511,
-        10,
+        521,
+        22,
         48,
         49
       ],
@@ -1744,9 +1744,9 @@
       "index": 10,
       "file": "010.png",
       "bbox": [
-        575,
-        10,
-        51,
+        585,
+        22,
+        48,
         49
       ],
       "tile_trim": 3
@@ -1755,8 +1755,8 @@
       "index": 11,
       "file": "011.png",
       "bbox": [
-        7,
-        73,
+        17,
+        85,
         48,
         49
       ],
@@ -1766,8 +1766,8 @@
       "index": 12,
       "file": "012.png",
       "bbox": [
-        70,
-        73,
+        80,
+        85,
         48,
         49
       ],
@@ -1777,8 +1777,8 @@
       "index": 13,
       "file": "013.png",
       "bbox": [
-        133,
-        73,
+        143,
+        85,
         48,
         49
       ],
@@ -1788,8 +1788,8 @@
       "index": 14,
       "file": "014.png",
       "bbox": [
-        196,
-        73,
+        206,
+        85,
         48,
         49
       ],
@@ -1799,8 +1799,8 @@
       "index": 15,
       "file": "015.png",
       "bbox": [
-        259,
-        73,
+        269,
+        85,
         48,
         49
       ],
@@ -1810,8 +1810,8 @@
       "index": 16,
       "file": "016.png",
       "bbox": [
-        322,
-        73,
+        332,
+        85,
         48,
         49
       ],
@@ -1821,8 +1821,8 @@
       "index": 17,
       "file": "017.png",
       "bbox": [
-        385,
-        73,
+        395,
+        85,
         48,
         49
       ],
@@ -1832,8 +1832,8 @@
       "index": 18,
       "file": "018.png",
       "bbox": [
-        448,
-        73,
+        458,
+        85,
         48,
         49
       ],
@@ -1843,8 +1843,8 @@
       "index": 19,
       "file": "019.png",
       "bbox": [
-        511,
-        73,
+        521,
+        85,
         48,
         49
       ],
@@ -1854,9 +1854,9 @@
       "index": 20,
       "file": "020.png",
       "bbox": [
-        575,
-        73,
-        51,
+        584,
+        85,
+        49,
         49
       ],
       "tile_trim": 3
@@ -1865,8 +1865,8 @@
       "index": 21,
       "file": "021.png",
       "bbox": [
-        7,
-        136,
+        17,
+        148,
         48,
         49
       ],
@@ -1876,8 +1876,8 @@
       "index": 22,
       "file": "022.png",
       "bbox": [
-        70,
-        136,
+        80,
+        148,
         48,
         49
       ],
@@ -1887,8 +1887,8 @@
       "index": 23,
       "file": "023.png",
       "bbox": [
-        133,
-        136,
+        143,
+        148,
         48,
         49
       ],
@@ -1898,8 +1898,8 @@
       "index": 24,
       "file": "024.png",
       "bbox": [
-        196,
-        136,
+        206,
+        148,
         48,
         49
       ],
@@ -1909,8 +1909,8 @@
       "index": 25,
       "file": "025.png",
       "bbox": [
-        259,
-        136,
+        269,
+        148,
         48,
         49
       ],
@@ -1920,8 +1920,8 @@
       "index": 26,
       "file": "026.png",
       "bbox": [
-        322,
-        136,
+        332,
+        148,
         48,
         49
       ],
@@ -1931,8 +1931,8 @@
       "index": 27,
       "file": "027.png",
       "bbox": [
-        385,
-        136,
+        395,
+        148,
         48,
         49
       ],
@@ -1942,8 +1942,8 @@
       "index": 28,
       "file": "028.png",
       "bbox": [
-        448,
-        136,
+        458,
+        148,
         48,
         49
       ],
@@ -1953,8 +1953,8 @@
       "index": 29,
       "file": "029.png",
       "bbox": [
-        511,
-        136,
+        521,
+        148,
         48,
         49
       ],
@@ -1964,9 +1964,9 @@
       "index": 30,
       "file": "030.png",
       "bbox": [
-        575,
-        136,
-        51,
+        585,
+        148,
+        47,
         49
       ],
       "tile_trim": 3
@@ -1975,8 +1975,8 @@
       "index": 31,
       "file": "031.png",
       "bbox": [
-        7,
-        199,
+        17,
+        211,
         48,
         49
       ],
@@ -1986,8 +1986,8 @@
       "index": 32,
       "file": "032.png",
       "bbox": [
-        70,
-        199,
+        80,
+        211,
         48,
         49
       ],
@@ -1997,8 +1997,8 @@
       "index": 33,
       "file": "033.png",
       "bbox": [
-        133,
-        199,
+        143,
+        211,
         48,
         49
       ],
@@ -2008,8 +2008,8 @@
       "index": 34,
       "file": "034.png",
       "bbox": [
-        196,
-        199,
+        206,
+        211,
         48,
         49
       ],
@@ -2019,8 +2019,8 @@
       "index": 35,
       "file": "035.png",
       "bbox": [
-        259,
-        199,
+        269,
+        211,
         48,
         49
       ],
@@ -2030,8 +2030,8 @@
       "index": 36,
       "file": "036.png",
       "bbox": [
-        322,
-        199,
+        332,
+        211,
         48,
         49
       ],
@@ -2041,8 +2041,8 @@
       "index": 37,
       "file": "037.png",
       "bbox": [
-        385,
-        199,
+        395,
+        211,
         48,
         49
       ],
@@ -2052,8 +2052,8 @@
       "index": 38,
       "file": "038.png",
       "bbox": [
-        448,
-        199,
+        458,
+        211,
         48,
         49
       ],
@@ -2063,8 +2063,8 @@
       "index": 39,
       "file": "039.png",
       "bbox": [
-        511,
-        199,
+        521,
+        211,
         48,
         49
       ],
@@ -2074,9 +2074,9 @@
       "index": 40,
       "file": "040.png",
       "bbox": [
-        575,
-        199,
-        51,
+        585,
+        211,
+        47,
         49
       ],
       "tile_trim": 3
@@ -2085,8 +2085,8 @@
       "index": 41,
       "file": "041.png",
       "bbox": [
-        7,
-        262,
+        17,
+        274,
         48,
         49
       ],
@@ -2096,8 +2096,8 @@
       "index": 42,
       "file": "042.png",
       "bbox": [
-        70,
-        262,
+        80,
+        274,
         48,
         49
       ],
@@ -2107,10 +2107,10 @@
       "index": 43,
       "file": "043.png",
       "bbox": [
-        133,
-        262,
+        143,
+        274,
         48,
-        49
+        50
       ],
       "tile_trim": 3
     },
@@ -2118,8 +2118,8 @@
       "index": 44,
       "file": "044.png",
       "bbox": [
-        196,
-        262,
+        206,
+        274,
         48,
         50
       ],
@@ -2129,8 +2129,8 @@
       "index": 45,
       "file": "045.png",
       "bbox": [
-        259,
-        262,
+        269,
+        274,
         48,
         49
       ],
@@ -2140,8 +2140,8 @@
       "index": 46,
       "file": "046.png",
       "bbox": [
-        322,
-        262,
+        332,
+        274,
         48,
         49
       ],
@@ -2151,8 +2151,8 @@
       "index": 47,
       "file": "047.png",
       "bbox": [
-        385,
-        262,
+        395,
+        274,
         48,
         49
       ],
@@ -2162,8 +2162,8 @@
       "index": 48,
       "file": "048.png",
       "bbox": [
-        448,
-        262,
+        458,
+        274,
         48,
         49
       ],
@@ -2173,8 +2173,8 @@
       "index": 49,
       "file": "049.png",
       "bbox": [
-        511,
-        262,
+        521,
+        274,
         48,
         49
       ],
@@ -2184,9 +2184,9 @@
       "index": 50,
       "file": "050.png",
       "bbox": [
-        575,
-        262,
-        51,
+        585,
+        274,
+        48,
         49
       ],
       "tile_trim": 3
@@ -2195,8 +2195,8 @@
       "index": 51,
       "file": "051.png",
       "bbox": [
-        7,
-        325,
+        17,
+        337,
         48,
         50
       ],
@@ -2206,8 +2206,8 @@
       "index": 52,
       "file": "052.png",
       "bbox": [
-        70,
-        325,
+        80,
+        337,
         48,
         50
       ],
@@ -2217,8 +2217,8 @@
       "index": 53,
       "file": "053.png",
       "bbox": [
-        133,
-        325,
+        143,
+        337,
         48,
         50
       ],
@@ -2228,8 +2228,8 @@
       "index": 54,
       "file": "054.png",
       "bbox": [
-        196,
-        325,
+        206,
+        337,
         48,
         50
       ],
@@ -2239,8 +2239,8 @@
       "index": 55,
       "file": "055.png",
       "bbox": [
-        259,
-        325,
+        269,
+        337,
         48,
         50
       ],
@@ -2250,8 +2250,8 @@
       "index": 56,
       "file": "056.png",
       "bbox": [
-        322,
-        325,
+        332,
+        337,
         48,
         50
       ],
@@ -2261,8 +2261,8 @@
       "index": 57,
       "file": "057.png",
       "bbox": [
-        385,
-        325,
+        395,
+        337,
         48,
         50
       ],
@@ -2272,8 +2272,8 @@
       "index": 58,
       "file": "058.png",
       "bbox": [
-        448,
-        325,
+        458,
+        337,
         48,
         50
       ],
@@ -2283,8 +2283,8 @@
       "index": 59,
       "file": "059.png",
       "bbox": [
-        511,
-        325,
+        521,
+        337,
         48,
         50
       ],
@@ -2294,9 +2294,9 @@
       "index": 60,
       "file": "060.png",
       "bbox": [
-        575,
-        325,
-        51,
+        585,
+        337,
+        47,
         50
       ],
       "tile_trim": 3
@@ -2305,8 +2305,8 @@
       "index": 61,
       "file": "061.png",
       "bbox": [
-        7,
-        388,
+        17,
+        400,
         48,
         50
       ],
@@ -2316,8 +2316,8 @@
       "index": 62,
       "file": "062.png",
       "bbox": [
-        70,
-        388,
+        80,
+        400,
         48,
         50
       ],
@@ -2327,8 +2327,8 @@
       "index": 63,
       "file": "063.png",
       "bbox": [
-        133,
-        388,
+        143,
+        400,
         48,
         50
       ],
@@ -2338,8 +2338,8 @@
       "index": 64,
       "file": "064.png",
       "bbox": [
-        196,
-        388,
+        206,
+        400,
         48,
         50
       ],
@@ -2349,8 +2349,8 @@
       "index": 65,
       "file": "065.png",
       "bbox": [
-        259,
-        388,
+        269,
+        400,
         48,
         50
       ],
@@ -2360,8 +2360,8 @@
       "index": 66,
       "file": "066.png",
       "bbox": [
-        322,
-        388,
+        332,
+        400,
         48,
         50
       ],
@@ -2371,8 +2371,8 @@
       "index": 67,
       "file": "067.png",
       "bbox": [
-        385,
-        388,
+        395,
+        400,
         48,
         50
       ],
@@ -2382,8 +2382,8 @@
       "index": 68,
       "file": "068.png",
       "bbox": [
-        448,
-        388,
+        458,
+        400,
         48,
         50
       ],
@@ -2393,8 +2393,8 @@
       "index": 69,
       "file": "069.png",
       "bbox": [
-        511,
-        388,
+        521,
+        400,
         48,
         50
       ],
@@ -2404,9 +2404,9 @@
       "index": 70,
       "file": "070.png",
       "bbox": [
-        575,
-        388,
-        51,
+        584,
+        400,
+        48,
         50
       ],
       "tile_trim": 3
@@ -2415,8 +2415,8 @@
       "index": 71,
       "file": "071.png",
       "bbox": [
-        7,
-        451,
+        17,
+        463,
         48,
         50
       ],
@@ -2426,8 +2426,8 @@
       "index": 72,
       "file": "072.png",
       "bbox": [
-        70,
-        451,
+        80,
+        463,
         48,
         50
       ],
@@ -2437,8 +2437,8 @@
       "index": 73,
       "file": "073.png",
       "bbox": [
-        133,
-        451,
+        143,
+        463,
         48,
         50
       ],
@@ -2448,8 +2448,8 @@
       "index": 74,
       "file": "074.png",
       "bbox": [
-        196,
-        451,
+        206,
+        463,
         48,
         50
       ],
@@ -2459,8 +2459,8 @@
       "index": 75,
       "file": "075.png",
       "bbox": [
-        259,
-        451,
+        269,
+        463,
         48,
         50
       ],
@@ -2470,8 +2470,8 @@
       "index": 76,
       "file": "076.png",
       "bbox": [
-        322,
-        451,
+        332,
+        463,
         48,
         50
       ],
@@ -2481,8 +2481,8 @@
       "index": 77,
       "file": "077.png",
       "bbox": [
-        385,
-        451,
+        395,
+        463,
         48,
         50
       ],
@@ -2492,8 +2492,8 @@
       "index": 78,
       "file": "078.png",
       "bbox": [
-        448,
-        451,
+        458,
+        463,
         48,
         50
       ],
@@ -2503,8 +2503,8 @@
       "index": 79,
       "file": "079.png",
       "bbox": [
-        511,
-        451,
+        521,
+        463,
         48,
         50
       ],
@@ -2514,9 +2514,9 @@
       "index": 80,
       "file": "080.png",
       "bbox": [
-        574,
-        451,
-        52,
+        585,
+        463,
+        48,
         50
       ],
       "tile_trim": 3
@@ -2525,8 +2525,8 @@
       "index": 81,
       "file": "081.png",
       "bbox": [
-        7,
-        514,
+        17,
+        526,
         48,
         50
       ],
@@ -2536,8 +2536,8 @@
       "index": 82,
       "file": "082.png",
       "bbox": [
-        70,
-        514,
+        80,
+        526,
         48,
         50
       ],
@@ -2547,8 +2547,8 @@
       "index": 83,
       "file": "083.png",
       "bbox": [
-        133,
-        514,
+        143,
+        526,
         48,
         50
       ],
@@ -2558,8 +2558,8 @@
       "index": 84,
       "file": "084.png",
       "bbox": [
-        196,
-        514,
+        206,
+        526,
         48,
         50
       ],
@@ -2569,8 +2569,8 @@
       "index": 85,
       "file": "085.png",
       "bbox": [
-        259,
-        514,
+        269,
+        526,
         48,
         50
       ],
@@ -2580,8 +2580,8 @@
       "index": 86,
       "file": "086.png",
       "bbox": [
-        322,
-        514,
+        332,
+        526,
         48,
         50
       ],
@@ -2591,8 +2591,8 @@
       "index": 87,
       "file": "087.png",
       "bbox": [
-        385,
-        514,
+        395,
+        526,
         48,
         50
       ],
@@ -2602,8 +2602,8 @@
       "index": 88,
       "file": "088.png",
       "bbox": [
-        448,
-        514,
+        458,
+        526,
         48,
         50
       ],
@@ -2613,8 +2613,8 @@
       "index": 89,
       "file": "089.png",
       "bbox": [
-        511,
-        514,
+        521,
+        526,
         48,
         50
       ],
@@ -2624,9 +2624,9 @@
       "index": 90,
       "file": "090.png",
       "bbox": [
-        575,
-        514,
-        51,
+        585,
+        526,
+        48,
         50
       ],
       "tile_trim": 3
@@ -2635,8 +2635,8 @@
       "index": 91,
       "file": "091.png",
       "bbox": [
-        7,
-        578,
+        17,
+        590,
         48,
         49
       ],
@@ -2646,8 +2646,8 @@
       "index": 92,
       "file": "092.png",
       "bbox": [
-        70,
-        578,
+        80,
+        590,
         48,
         49
       ],
@@ -2657,8 +2657,8 @@
       "index": 93,
       "file": "093.png",
       "bbox": [
-        133,
-        578,
+        143,
+        590,
         48,
         49
       ],
@@ -2668,8 +2668,8 @@
       "index": 94,
       "file": "094.png",
       "bbox": [
-        196,
-        578,
+        206,
+        590,
         48,
         49
       ],
@@ -2679,8 +2679,8 @@
       "index": 95,
       "file": "095.png",
       "bbox": [
-        259,
-        578,
+        269,
+        590,
         48,
         49
       ],
@@ -2690,8 +2690,8 @@
       "index": 96,
       "file": "096.png",
       "bbox": [
-        322,
-        578,
+        332,
+        590,
         48,
         49
       ],
@@ -2701,8 +2701,8 @@
       "index": 97,
       "file": "097.png",
       "bbox": [
-        385,
-        578,
+        395,
+        590,
         48,
         49
       ],
@@ -2712,8 +2712,8 @@
       "index": 98,
       "file": "098.png",
       "bbox": [
-        448,
-        578,
+        458,
+        590,
         48,
         49
       ],
@@ -2723,8 +2723,8 @@
       "index": 99,
       "file": "099.png",
       "bbox": [
-        511,
-        578,
+        521,
+        590,
         48,
         49
       ],
@@ -2734,9 +2734,9 @@
       "index": 100,
       "file": "100.png",
       "bbox": [
-        575,
-        578,
-        51,
+        585,
+        590,
+        47,
         49
       ],
       "tile_trim": 3
@@ -2745,8 +2745,8 @@
       "index": 101,
       "file": "101.png",
       "bbox": [
-        7,
-        641,
+        17,
+        653,
         48,
         49
       ],
@@ -2756,8 +2756,8 @@
       "index": 102,
       "file": "102.png",
       "bbox": [
-        70,
-        641,
+        80,
+        653,
         48,
         49
       ],
@@ -2767,8 +2767,8 @@
       "index": 103,
       "file": "103.png",
       "bbox": [
-        133,
-        641,
+        143,
+        653,
         48,
         49
       ],
@@ -2778,8 +2778,8 @@
       "index": 104,
       "file": "104.png",
       "bbox": [
-        196,
-        641,
+        206,
+        653,
         48,
         49
       ],
@@ -2789,8 +2789,8 @@
       "index": 105,
       "file": "105.png",
       "bbox": [
-        259,
-        641,
+        269,
+        653,
         48,
         49
       ],
@@ -2800,8 +2800,8 @@
       "index": 106,
       "file": "106.png",
       "bbox": [
-        322,
-        641,
+        332,
+        653,
         48,
         49
       ],
@@ -2811,8 +2811,8 @@
       "index": 107,
       "file": "107.png",
       "bbox": [
-        385,
-        641,
+        395,
+        653,
         48,
         49
       ],
@@ -2822,8 +2822,8 @@
       "index": 108,
       "file": "108.png",
       "bbox": [
-        448,
-        641,
+        458,
+        653,
         48,
         49
       ],
@@ -2833,8 +2833,8 @@
       "index": 109,
       "file": "109.png",
       "bbox": [
-        511,
-        641,
+        521,
+        653,
         48,
         49
       ],
@@ -2844,9 +2844,9 @@
       "index": 110,
       "file": "110.png",
       "bbox": [
-        575,
-        641,
-        51,
+        585,
+        653,
+        47,
         49
       ],
       "tile_trim": 3
@@ -2855,8 +2855,8 @@
       "index": 111,
       "file": "111.png",
       "bbox": [
-        7,
-        704,
+        17,
+        716,
         48,
         49
       ],
@@ -2866,8 +2866,8 @@
       "index": 112,
       "file": "112.png",
       "bbox": [
-        70,
-        704,
+        80,
+        716,
         48,
         49
       ],
@@ -2877,8 +2877,8 @@
       "index": 113,
       "file": "113.png",
       "bbox": [
-        133,
-        704,
+        143,
+        716,
         48,
         49
       ],
@@ -2888,8 +2888,8 @@
       "index": 114,
       "file": "114.png",
       "bbox": [
-        196,
-        704,
+        206,
+        716,
         48,
         49
       ],
@@ -2899,8 +2899,8 @@
       "index": 115,
       "file": "115.png",
       "bbox": [
-        259,
-        704,
+        269,
+        716,
         48,
         49
       ],
@@ -2910,10 +2910,10 @@
       "index": 116,
       "file": "116.png",
       "bbox": [
-        322,
-        704,
+        332,
+        715,
         48,
-        49
+        50
       ],
       "tile_trim": 3
     },
@@ -2921,8 +2921,8 @@
       "index": 117,
       "file": "117.png",
       "bbox": [
-        385,
-        704,
+        395,
+        716,
         48,
         49
       ],
@@ -2932,8 +2932,8 @@
       "index": 118,
       "file": "118.png",
       "bbox": [
-        448,
-        703,
+        458,
+        715,
         48,
         50
       ],
@@ -2943,8 +2943,8 @@
       "index": 119,
       "file": "119.png",
       "bbox": [
-        511,
-        703,
+        521,
+        715,
         48,
         50
       ],
@@ -2954,9 +2954,9 @@
       "index": 120,
       "file": "120.png",
       "bbox": [
-        575,
-        703,
-        51,
+        585,
+        715,
+        48,
         50
       ],
       "tile_trim": 3
@@ -2965,8 +2965,8 @@
       "index": 121,
       "file": "121.png",
       "bbox": [
-        7,
-        767,
+        17,
+        779,
         48,
         49
       ],
@@ -2976,8 +2976,8 @@
       "index": 122,
       "file": "122.png",
       "bbox": [
-        70,
-        767,
+        80,
+        779,
         48,
         49
       ],
@@ -2987,8 +2987,8 @@
       "index": 123,
       "file": "123.png",
       "bbox": [
-        133,
-        767,
+        143,
+        779,
         48,
         49
       ],
@@ -2998,8 +2998,8 @@
       "index": 124,
       "file": "124.png",
       "bbox": [
-        196,
-        767,
+        206,
+        779,
         48,
         49
       ],
@@ -3009,8 +3009,8 @@
       "index": 125,
       "file": "125.png",
       "bbox": [
-        259,
-        767,
+        269,
+        779,
         48,
         49
       ],
@@ -3020,8 +3020,8 @@
       "index": 126,
       "file": "126.png",
       "bbox": [
-        322,
-        767,
+        332,
+        779,
         48,
         49
       ],
@@ -3031,8 +3031,8 @@
       "index": 127,
       "file": "127.png",
       "bbox": [
-        385,
-        767,
+        395,
+        779,
         48,
         49
       ],
@@ -3042,8 +3042,8 @@
       "index": 128,
       "file": "128.png",
       "bbox": [
-        448,
-        767,
+        458,
+        779,
         48,
         49
       ],
@@ -3053,8 +3053,8 @@
       "index": 129,
       "file": "129.png",
       "bbox": [
-        511,
-        767,
+        521,
+        779,
         48,
         49
       ],
@@ -3064,9 +3064,9 @@
       "index": 130,
       "file": "130.png",
       "bbox": [
-        575,
-        767,
-        51,
+        585,
+        779,
+        48,
         49
       ],
       "tile_trim": 3
@@ -3075,8 +3075,8 @@
       "index": 131,
       "file": "131.png",
       "bbox": [
-        7,
-        829,
+        17,
+        841,
         48,
         50
       ],
@@ -3086,8 +3086,8 @@
       "index": 132,
       "file": "132.png",
       "bbox": [
-        70,
-        829,
+        80,
+        841,
         48,
         50
       ],
@@ -3097,8 +3097,8 @@
       "index": 133,
       "file": "133.png",
       "bbox": [
-        133,
-        830,
+        143,
+        842,
         48,
         49
       ],
@@ -3108,8 +3108,8 @@
       "index": 134,
       "file": "134.png",
       "bbox": [
-        196,
-        830,
+        206,
+        842,
         48,
         49
       ],
@@ -3119,8 +3119,8 @@
       "index": 135,
       "file": "135.png",
       "bbox": [
-        259,
-        829,
+        269,
+        841,
         48,
         50
       ],
@@ -3130,8 +3130,8 @@
       "index": 136,
       "file": "136.png",
       "bbox": [
-        322,
-        830,
+        332,
+        842,
         48,
         49
       ],
@@ -3141,10 +3141,10 @@
       "index": 137,
       "file": "137.png",
       "bbox": [
-        385,
-        829,
+        395,
+        842,
         48,
-        50
+        49
       ],
       "tile_trim": 3
     },
@@ -3152,8 +3152,8 @@
       "index": 138,
       "file": "138.png",
       "bbox": [
-        448,
-        829,
+        458,
+        841,
         48,
         50
       ],
@@ -3163,8 +3163,8 @@
       "index": 139,
       "file": "139.png",
       "bbox": [
-        511,
-        830,
+        521,
+        842,
         48,
         49
       ],
@@ -3174,10 +3174,10 @@
       "index": 140,
       "file": "140.png",
       "bbox": [
-        575,
-        829,
-        51,
-        50
+        585,
+        842,
+        47,
+        49
       ],
       "tile_trim": 3
     },
@@ -3185,8 +3185,8 @@
       "index": 141,
       "file": "141.png",
       "bbox": [
-        7,
-        893,
+        17,
+        905,
         48,
         49
       ],
@@ -3196,8 +3196,8 @@
       "index": 142,
       "file": "142.png",
       "bbox": [
-        70,
-        893,
+        80,
+        905,
         48,
         49
       ],
@@ -3207,8 +3207,8 @@
       "index": 143,
       "file": "143.png",
       "bbox": [
-        133,
-        893,
+        143,
+        905,
         48,
         49
       ],
@@ -3218,8 +3218,8 @@
       "index": 144,
       "file": "144.png",
       "bbox": [
-        196,
-        893,
+        206,
+        905,
         48,
         49
       ],
@@ -3229,8 +3229,8 @@
       "index": 145,
       "file": "145.png",
       "bbox": [
-        259,
-        893,
+        269,
+        905,
         48,
         49
       ],
@@ -3240,8 +3240,8 @@
       "index": 146,
       "file": "146.png",
       "bbox": [
-        322,
-        893,
+        332,
+        905,
         48,
         49
       ],
@@ -3251,8 +3251,8 @@
       "index": 147,
       "file": "147.png",
       "bbox": [
-        385,
-        893,
+        395,
+        905,
         48,
         49
       ],
@@ -3262,8 +3262,8 @@
       "index": 148,
       "file": "148.png",
       "bbox": [
-        448,
-        893,
+        458,
+        905,
         48,
         49
       ],
@@ -3273,8 +3273,8 @@
       "index": 149,
       "file": "149.png",
       "bbox": [
-        511,
-        893,
+        521,
+        905,
         48,
         49
       ],
@@ -3284,9 +3284,9 @@
       "index": 150,
       "file": "150.png",
       "bbox": [
-        575,
-        893,
-        51,
+        585,
+        905,
+        48,
         49
       ],
       "tile_trim": 3
@@ -3295,8 +3295,8 @@
       "index": 151,
       "file": "151.png",
       "bbox": [
-        7,
-        956,
+        17,
+        968,
         48,
         50
       ],
@@ -3306,8 +3306,8 @@
       "index": 152,
       "file": "152.png",
       "bbox": [
-        70,
-        956,
+        80,
+        968,
         48,
         50
       ],
@@ -3317,8 +3317,8 @@
       "index": 153,
       "file": "153.png",
       "bbox": [
-        133,
-        956,
+        143,
+        968,
         48,
         50
       ],
@@ -3328,8 +3328,8 @@
       "index": 154,
       "file": "154.png",
       "bbox": [
-        196,
-        956,
+        206,
+        968,
         48,
         50
       ],
@@ -3339,8 +3339,8 @@
       "index": 155,
       "file": "155.png",
       "bbox": [
-        259,
-        956,
+        269,
+        968,
         48,
         50
       ],
@@ -3350,8 +3350,8 @@
       "index": 156,
       "file": "156.png",
       "bbox": [
-        322,
-        956,
+        332,
+        968,
         48,
         50
       ],
@@ -3361,8 +3361,8 @@
       "index": 157,
       "file": "157.png",
       "bbox": [
-        385,
-        956,
+        395,
+        968,
         48,
         50
       ],
@@ -3372,8 +3372,8 @@
       "index": 158,
       "file": "158.png",
       "bbox": [
-        448,
-        956,
+        458,
+        968,
         48,
         50
       ],
@@ -3383,8 +3383,8 @@
       "index": 159,
       "file": "159.png",
       "bbox": [
-        511,
-        956,
+        521,
+        968,
         48,
         50
       ],
@@ -3394,9 +3394,9 @@
       "index": 160,
       "file": "160.png",
       "bbox": [
-        575,
-        956,
-        51,
+        585,
+        968,
+        47,
         50
       ],
       "tile_trim": 3
