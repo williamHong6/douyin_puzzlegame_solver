@@ -1,2492 +1,395 @@
 {
   "original_board": [
     [
-      2,
-      4,
       9,
       7,
-      3,
-      8,
-      6,
-      3,
+      1,
       5,
+      1,
+      5,
+      1,
+      9,
+      6,
       7
     ],
     [
-      9,
-      8,
-      1,
-      4,
-      5,
-      1,
-      7,
-      1,
+      3,
       6,
-      4
-    ],
-    [
-      5,
+      9,
       2,
-      7,
-      7,
       1,
+      9,
       3,
       8,
-      8,
       5,
-      4
+      5
     ],
     [
       6,
-      8,
-      9,
       1,
-      8,
-      9,
+      4,
+      3,
+      6,
       5,
-      8,
+      3,
       5,
-      2
+      1,
+      7
     ],
     [
-      9,
-      9,
-      6,
+      5,
+      3,
+      5,
       7,
-      6,
-      8,
+      9,
+      4,
+      1,
+      4,
       7,
-      6,
-      8,
       1
     ],
     [
+      6,
       5,
-      7,
-      4,
-      2,
-      2,
-      8,
-      7,
+      3,
       1,
       6,
-      6
-    ],
-    [
-      2,
-      4,
-      6,
-      3,
-      9,
-      7,
-      3,
-      3,
-      3,
-      3
-    ],
-    [
-      7,
-      8,
-      7,
-      4,
-      7,
-      6,
-      7,
-      6,
-      9,
-      8
-    ],
-    [
-      9,
       1,
-      3,
       9,
-      8,
+      7,
       6,
-      8,
-      6,
-      3,
-      9
+      5
     ],
     [
-      1,
-      3,
-      8,
-      4,
+      6,
       5,
-      9,
-      9,
-      2,
-      4,
-      8
-    ],
-    [
-      4,
-      6,
-      7,
-      3,
-      4,
       8,
-      9,
-      1,
-      1,
-      3
-    ],
-    [
-      2,
-      6,
-      1,
       7,
-      1,
-      9,
-      8,
-      5,
-      2,
-      4
-    ],
-    [
-      9,
-      4,
-      5,
-      4,
       6,
       9,
-      1,
-      5,
-      6,
-      8
-    ],
-    [
-      5,
       4,
       3,
-      7,
-      8,
       2,
-      7,
-      4,
-      2,
-      4
-    ],
-    [
-      3,
-      2,
-      7,
-      7,
-      6,
-      6,
-      9,
-      8,
-      8,
       2
     ],
     [
+      5,
+      5,
+      8,
+      7,
+      2,
+      1,
+      3,
+      1,
+      8,
+      7
+    ],
+    [
+      3,
+      3,
+      6,
+      9,
+      6,
+      2,
       2,
       4,
-      1,
+      4,
+      7
+    ],
+    [
+      6,
+      5,
+      9,
+      9,
+      6,
+      8,
+      6,
+      6,
+      8,
+      3
+    ],
+    [
+      6,
+      2,
       6,
       1,
       5,
       9,
+      2,
+      3,
       7,
+      6
+    ],
+    [
+      7,
+      8,
+      6,
+      8,
+      9,
+      9,
+      5,
+      4,
+      6,
+      9
+    ],
+    [
+      5,
+      8,
+      5,
+      8,
+      3,
+      2,
+      4,
+      4,
+      2,
+      2
+    ],
+    [
+      4,
+      2,
+      7,
+      2,
+      8,
+      6,
+      4,
+      8,
+      1,
+      9
+    ],
+    [
+      4,
+      8,
+      3,
+      9,
+      7,
+      1,
+      3,
+      9,
       3,
       9
+    ],
+    [
+      8,
+      5,
+      3,
+      7,
+      8,
+      1,
+      7,
+      8,
+      2,
+      2
+    ],
+    [
+      3,
+      2,
+      1,
+      5,
+      4,
+      1,
+      9,
+      2,
+      5,
+      2
     ]
   ],
   "current_board": [
     [
-      2,
-      4,
-      0,
-      0,
-      0,
-      8,
-      6,
-      3,
+      9,
+      7,
+      1,
       5,
+      1,
+      5,
+      1,
+      9,
+      6,
       7
     ],
     [
+      3,
+      6,
       9,
-      0,
-      0,
+      2,
+      1,
+      9,
+      3,
+      8,
+      5,
+      5
+    ],
+    [
+      6,
+      1,
       4,
-      0,
-      0,
+      3,
+      6,
+      5,
+      3,
+      5,
+      1,
+      7
+    ],
+    [
+      5,
+      3,
+      5,
       7,
+      9,
+      4,
+      1,
+      4,
+      7,
+      1
+    ],
+    [
+      6,
+      5,
+      3,
       1,
       6,
-      0
-    ],
-    [
-      5,
-      0,
+      1,
+      9,
       7,
-      7,
-      0,
-      0,
-      8,
-      8,
-      0,
-      0
+      6,
+      5
     ],
     [
       6,
-      8,
-      9,
-      0,
-      8,
-      9,
       5,
       8,
-      0,
-      0
-    ],
-    [
-      9,
-      9,
-      0,
-      0,
+      7,
       6,
-      8,
-      7,
-      0,
-      8,
-      0
-    ],
-    [
-      5,
-      7,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      6,
-      0
-    ],
-    [
-      2,
-      0,
-      0,
-      3,
       9,
-      7,
-      0,
-      0,
-      3,
-      0
-    ],
-    [
-      7,
-      8,
-      0,
       4,
-      7,
-      6,
-      7,
-      6,
-      9,
-      8
+      3,
+      2,
+      2
     ],
     [
-      0,
-      0,
-      0,
+      5,
+      5,
+      8,
+      7,
+      2,
+      1,
+      3,
+      1,
+      8,
+      7
+    ],
+    [
+      3,
+      3,
+      6,
       9,
-      8,
+      6,
+      2,
+      2,
+      4,
+      4,
+      7
+    ],
+    [
+      6,
+      5,
+      9,
+      9,
       6,
       8,
       6,
+      6,
+      8,
+      3
+    ],
+    [
+      6,
+      2,
+      6,
+      1,
+      5,
+      9,
+      2,
+      3,
+      7,
+      6
+    ],
+    [
+      7,
+      8,
+      6,
+      8,
+      9,
+      9,
+      5,
+      4,
+      6,
+      9
+    ],
+    [
+      5,
+      8,
+      5,
+      8,
+      3,
+      2,
+      4,
+      4,
+      2,
+      2
+    ],
+    [
+      4,
+      2,
+      7,
+      2,
+      8,
+      6,
+      4,
+      8,
+      1,
+      9
+    ],
+    [
+      4,
+      8,
+      3,
+      9,
+      7,
+      1,
+      3,
+      9,
       3,
       9
     ],
     [
-      0,
-      0,
       8,
-      4,
-      0,
-      9,
-      9,
-      2,
-      4,
-      8
-    ],
-    [
-      4,
-      0,
-      0,
-      0,
-      0,
-      8,
-      0,
-      0,
-      0,
-      0
-    ],
-    [
-      2,
-      0,
-      1,
-      7,
-      0,
-      9,
-      8,
-      0,
-      0,
-      0
-    ],
-    [
-      9,
-      0,
       5,
-      0,
-      0,
-      0,
-      0,
-      0,
-      6,
-      8
-    ],
-    [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      3,
       7,
-      0,
-      0,
-      0
-    ],
-    [
-      0,
-      0,
-      7,
-      7,
-      6,
-      6,
-      9,
       8,
-      0,
-      0
+      1,
+      7,
+      8,
+      2,
+      2
     ],
     [
-      0,
-      0,
-      1,
-      6,
+      3,
+      2,
       1,
       5,
+      4,
+      1,
       9,
-      0,
-      0,
-      9
+      2,
+      5,
+      2
     ]
   ],
-  "round_count": 1,
-  "removed_count": 75,
-  "remaining_count": 85,
-  "total_score": 75,
-  "rounds": [
-    {
-      "round": 1,
-      "board_before": [
-        [
-          2,
-          4,
-          9,
-          7,
-          3,
-          8,
-          6,
-          3,
-          5,
-          7
-        ],
-        [
-          9,
-          8,
-          1,
-          4,
-          5,
-          1,
-          7,
-          1,
-          6,
-          4
-        ],
-        [
-          5,
-          2,
-          7,
-          7,
-          1,
-          3,
-          8,
-          8,
-          5,
-          4
-        ],
-        [
-          6,
-          8,
-          9,
-          1,
-          8,
-          9,
-          5,
-          8,
-          5,
-          2
-        ],
-        [
-          9,
-          9,
-          6,
-          7,
-          6,
-          8,
-          7,
-          6,
-          8,
-          1
-        ],
-        [
-          5,
-          7,
-          4,
-          2,
-          2,
-          8,
-          7,
-          1,
-          6,
-          6
-        ],
-        [
-          2,
-          4,
-          6,
-          3,
-          9,
-          7,
-          3,
-          3,
-          3,
-          3
-        ],
-        [
-          7,
-          8,
-          7,
-          4,
-          7,
-          6,
-          7,
-          6,
-          9,
-          8
-        ],
-        [
-          9,
-          1,
-          3,
-          9,
-          8,
-          6,
-          8,
-          6,
-          3,
-          9
-        ],
-        [
-          1,
-          3,
-          8,
-          4,
-          5,
-          9,
-          9,
-          2,
-          4,
-          8
-        ],
-        [
-          4,
-          6,
-          7,
-          3,
-          4,
-          8,
-          9,
-          1,
-          1,
-          3
-        ],
-        [
-          2,
-          6,
-          1,
-          7,
-          1,
-          9,
-          8,
-          5,
-          2,
-          4
-        ],
-        [
-          9,
-          4,
-          5,
-          4,
-          6,
-          9,
-          1,
-          5,
-          6,
-          8
-        ],
-        [
-          5,
-          4,
-          3,
-          7,
-          8,
-          2,
-          7,
-          4,
-          2,
-          4
-        ],
-        [
-          3,
-          2,
-          7,
-          7,
-          6,
-          6,
-          9,
-          8,
-          8,
-          2
-        ],
-        [
-          2,
-          4,
-          1,
-          6,
-          1,
-          5,
-          9,
-          7,
-          3,
-          9
-        ]
-      ],
-      "board_after": [
-        [
-          2,
-          4,
-          0,
-          0,
-          0,
-          8,
-          6,
-          3,
-          5,
-          7
-        ],
-        [
-          9,
-          0,
-          0,
-          4,
-          0,
-          0,
-          7,
-          1,
-          6,
-          0
-        ],
-        [
-          5,
-          0,
-          7,
-          7,
-          0,
-          0,
-          8,
-          8,
-          0,
-          0
-        ],
-        [
-          6,
-          8,
-          9,
-          0,
-          8,
-          9,
-          5,
-          8,
-          0,
-          0
-        ],
-        [
-          9,
-          9,
-          0,
-          0,
-          6,
-          8,
-          7,
-          0,
-          8,
-          0
-        ],
-        [
-          5,
-          7,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          6,
-          0
-        ],
-        [
-          2,
-          0,
-          0,
-          3,
-          9,
-          7,
-          0,
-          0,
-          3,
-          0
-        ],
-        [
-          7,
-          8,
-          0,
-          4,
-          7,
-          6,
-          7,
-          6,
-          9,
-          8
-        ],
-        [
-          0,
-          0,
-          0,
-          9,
-          8,
-          6,
-          8,
-          6,
-          3,
-          9
-        ],
-        [
-          0,
-          0,
-          8,
-          4,
-          0,
-          9,
-          9,
-          2,
-          4,
-          8
-        ],
-        [
-          4,
-          0,
-          0,
-          0,
-          0,
-          8,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          2,
-          0,
-          1,
-          7,
-          0,
-          9,
-          8,
-          0,
-          0,
-          0
-        ],
-        [
-          9,
-          0,
-          5,
-          0,
-          0,
-          0,
-          0,
-          0,
-          6,
-          8
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          7,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          7,
-          7,
-          6,
-          6,
-          9,
-          8,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          1,
-          6,
-          1,
-          5,
-          9,
-          0,
-          0,
-          9
-        ]
-      ],
-      "moves": [
-        {
-          "id": 1,
-          "display_id": "A1",
-          "rect": [
-            1,
-            4,
-            2,
-            5
-          ],
-          "rect_human": "R2C5:R3C6",
-          "values": [
-            5,
-            1,
-            1,
-            3
-          ],
-          "positions": [
-            [
-              1,
-              4
-            ],
-            [
-              1,
-              5
-            ],
-            [
-              2,
-              4
-            ],
-            [
-              2,
-              5
-            ]
-          ],
-          "remove_positions": [
-            [
-              1,
-              4
-            ],
-            [
-              1,
-              5
-            ],
-            [
-              2,
-              4
-            ],
-            [
-              2,
-              5
-            ]
-          ],
-          "positions_human": [
-            "R2C5",
-            "R2C6",
-            "R3C5",
-            "R3C6"
-          ],
-          "sum": 10,
-          "area": 4,
-          "removed_count": 4,
-          "bonus": 0,
-          "move_score": 4,
-          "height": 2,
-          "width": 2,
-          "category": "easy",
-          "color": "#ffcc66",
-          "batch_index": 1
-        },
-        {
-          "id": 2,
-          "display_id": "A2",
-          "rect": [
-            10,
-            8,
-            11,
-            9
-          ],
-          "rect_human": "R11C9:R12C10",
-          "values": [
-            1,
-            3,
-            2,
-            4
-          ],
-          "positions": [
-            [
-              10,
-              8
-            ],
-            [
-              10,
-              9
-            ],
-            [
-              11,
-              8
-            ],
-            [
-              11,
-              9
-            ]
-          ],
-          "remove_positions": [
-            [
-              10,
-              8
-            ],
-            [
-              10,
-              9
-            ],
-            [
-              11,
-              8
-            ],
-            [
-              11,
-              9
-            ]
-          ],
-          "positions_human": [
-            "R11C9",
-            "R11C10",
-            "R12C9",
-            "R12C10"
-          ],
-          "sum": 10,
-          "area": 4,
-          "removed_count": 4,
-          "bonus": 0,
-          "move_score": 4,
-          "height": 2,
-          "width": 2,
-          "category": "easy",
-          "color": "#99ccff",
-          "batch_index": 2
-        },
-        {
-          "id": 6,
-          "display_id": "A6",
-          "rect": [
-            1,
-            9,
-            3,
-            9
-          ],
-          "rect_human": "R2C10:R4C10",
-          "values": [
-            4,
-            4,
-            2
-          ],
-          "positions": [
-            [
-              1,
-              9
-            ],
-            [
-              2,
-              9
-            ],
-            [
-              3,
-              9
-            ]
-          ],
-          "remove_positions": [
-            [
-              1,
-              9
-            ],
-            [
-              2,
-              9
-            ],
-            [
-              3,
-              9
-            ]
-          ],
-          "positions_human": [
-            "R2C10",
-            "R3C10",
-            "R4C10"
-          ],
-          "sum": 10,
-          "area": 3,
-          "removed_count": 3,
-          "bonus": 0,
-          "move_score": 3,
-          "height": 3,
-          "width": 1,
-          "category": "easy",
-          "color": "#ff9999",
-          "batch_index": 3
-        },
-        {
-          "id": 7,
-          "display_id": "A7",
-          "rect": [
-            3,
-            3,
-            5,
-            3
-          ],
-          "rect_human": "R4C4:R6C4",
-          "values": [
-            1,
-            7,
-            2
-          ],
-          "positions": [
-            [
-              3,
-              3
-            ],
-            [
-              4,
-              3
-            ],
-            [
-              5,
-              3
-            ]
-          ],
-          "remove_positions": [
-            [
-              3,
-              3
-            ],
-            [
-              4,
-              3
-            ],
-            [
-              5,
-              3
-            ]
-          ],
-          "positions_human": [
-            "R4C4",
-            "R5C4",
-            "R6C4"
-          ],
-          "sum": 10,
-          "area": 3,
-          "removed_count": 3,
-          "bonus": 0,
-          "move_score": 3,
-          "height": 3,
-          "width": 1,
-          "category": "easy",
-          "color": "#99dd99",
-          "batch_index": 4
-        },
-        {
-          "id": 8,
-          "display_id": "A8",
-          "rect": [
-            4,
-            7,
-            6,
-            7
-          ],
-          "rect_human": "R5C8:R7C8",
-          "values": [
-            6,
-            1,
-            3
-          ],
-          "positions": [
-            [
-              4,
-              7
-            ],
-            [
-              5,
-              7
-            ],
-            [
-              6,
-              7
-            ]
-          ],
-          "remove_positions": [
-            [
-              4,
-              7
-            ],
-            [
-              5,
-              7
-            ],
-            [
-              6,
-              7
-            ]
-          ],
-          "positions_human": [
-            "R5C8",
-            "R6C8",
-            "R7C8"
-          ],
-          "sum": 10,
-          "area": 3,
-          "removed_count": 3,
-          "bonus": 0,
-          "move_score": 3,
-          "height": 3,
-          "width": 1,
-          "category": "easy",
-          "color": "#cc99ff",
-          "batch_index": 5
-        },
-        {
-          "id": 9,
-          "display_id": "A9",
-          "rect": [
-            4,
-            9,
-            6,
-            9
-          ],
-          "rect_human": "R5C10:R7C10",
-          "values": [
-            1,
-            6,
-            3
-          ],
-          "positions": [
-            [
-              4,
-              9
-            ],
-            [
-              5,
-              9
-            ],
-            [
-              6,
-              9
-            ]
-          ],
-          "remove_positions": [
-            [
-              4,
-              9
-            ],
-            [
-              5,
-              9
-            ],
-            [
-              6,
-              9
-            ]
-          ],
-          "positions_human": [
-            "R5C10",
-            "R6C10",
-            "R7C10"
-          ],
-          "sum": 10,
-          "area": 3,
-          "removed_count": 3,
-          "bonus": 0,
-          "move_score": 3,
-          "height": 3,
-          "width": 1,
-          "category": "easy",
-          "color": "#ffb366",
-          "batch_index": 6
-        },
-        {
-          "id": 11,
-          "display_id": "A11",
-          "rect": [
-            8,
-            1,
-            10,
-            1
-          ],
-          "rect_human": "R9C2:R11C2",
-          "values": [
-            1,
-            3,
-            6
-          ],
-          "positions": [
-            [
-              8,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ]
-          ],
-          "remove_positions": [
-            [
-              8,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ]
-          ],
-          "positions_human": [
-            "R9C2",
-            "R10C2",
-            "R11C2"
-          ],
-          "sum": 10,
-          "area": 3,
-          "removed_count": 3,
-          "bonus": 0,
-          "move_score": 3,
-          "height": 3,
-          "width": 1,
-          "category": "easy",
-          "color": "#66cccc",
-          "batch_index": 7
-        },
-        {
-          "id": 12,
-          "display_id": "A12",
-          "rect": [
-            9,
-            4,
-            11,
-            4
-          ],
-          "rect_human": "R10C5:R12C5",
-          "values": [
-            5,
-            4,
-            1
-          ],
-          "positions": [
-            [
-              9,
-              4
-            ],
-            [
-              10,
-              4
-            ],
-            [
-              11,
-              4
-            ]
-          ],
-          "remove_positions": [
-            [
-              9,
-              4
-            ],
-            [
-              10,
-              4
-            ],
-            [
-              11,
-              4
-            ]
-          ],
-          "positions_human": [
-            "R10C5",
-            "R11C5",
-            "R12C5"
-          ],
-          "sum": 10,
-          "area": 3,
-          "removed_count": 3,
-          "bonus": 0,
-          "move_score": 3,
-          "height": 3,
-          "width": 1,
-          "category": "easy",
-          "color": "#f2a6d8",
-          "batch_index": 8
-        },
-        {
-          "id": 15,
-          "display_id": "A15",
-          "rect": [
-            13,
-            0,
-            15,
-            0
-          ],
-          "rect_human": "R14C1:R16C1",
-          "values": [
-            5,
-            3,
-            2
-          ],
-          "positions": [
-            [
-              13,
-              0
-            ],
-            [
-              14,
-              0
-            ],
-            [
-              15,
-              0
-            ]
-          ],
-          "remove_positions": [
-            [
-              13,
-              0
-            ],
-            [
-              14,
-              0
-            ],
-            [
-              15,
-              0
-            ]
-          ],
-          "positions_human": [
-            "R14C1",
-            "R15C1",
-            "R16C1"
-          ],
-          "sum": 10,
-          "area": 3,
-          "removed_count": 3,
-          "bonus": 0,
-          "move_score": 3,
-          "height": 3,
-          "width": 1,
-          "category": "easy",
-          "color": "#ffcc66",
-          "batch_index": 9
-        },
-        {
-          "id": 16,
-          "display_id": "A16",
-          "rect": [
-            13,
-            1,
-            15,
-            1
-          ],
-          "rect_human": "R14C2:R16C2",
-          "values": [
-            4,
-            2,
-            4
-          ],
-          "positions": [
-            [
-              13,
-              1
-            ],
-            [
-              14,
-              1
-            ],
-            [
-              15,
-              1
-            ]
-          ],
-          "remove_positions": [
-            [
-              13,
-              1
-            ],
-            [
-              14,
-              1
-            ],
-            [
-              15,
-              1
-            ]
-          ],
-          "positions_human": [
-            "R14C2",
-            "R15C2",
-            "R16C2"
-          ],
-          "sum": 10,
-          "area": 3,
-          "removed_count": 3,
-          "bonus": 0,
-          "move_score": 3,
-          "height": 3,
-          "width": 1,
-          "category": "easy",
-          "color": "#99ccff",
-          "batch_index": 10
-        },
-        {
-          "id": 17,
-          "display_id": "A17",
-          "rect": [
-            13,
-            7,
-            13,
-            9
-          ],
-          "rect_human": "R14C8:R14C10",
-          "values": [
-            4,
-            2,
-            4
-          ],
-          "positions": [
-            [
-              13,
-              7
-            ],
-            [
-              13,
-              8
-            ],
-            [
-              13,
-              9
-            ]
-          ],
-          "remove_positions": [
-            [
-              13,
-              7
-            ],
-            [
-              13,
-              8
-            ],
-            [
-              13,
-              9
-            ]
-          ],
-          "positions_human": [
-            "R14C8",
-            "R14C9",
-            "R14C10"
-          ],
-          "sum": 10,
-          "area": 3,
-          "removed_count": 3,
-          "bonus": 0,
-          "move_score": 3,
-          "height": 1,
-          "width": 3,
-          "category": "easy",
-          "color": "#ff9999",
-          "batch_index": 11
-        },
-        {
-          "id": 18,
-          "display_id": "A18",
-          "rect": [
-            0,
-            2,
-            1,
-            2
-          ],
-          "rect_human": "R1C3:R2C3",
-          "values": [
-            9,
-            1
-          ],
-          "positions": [
-            [
-              0,
-              2
-            ],
-            [
-              1,
-              2
-            ]
-          ],
-          "remove_positions": [
-            [
-              0,
-              2
-            ],
-            [
-              1,
-              2
-            ]
-          ],
-          "positions_human": [
-            "R1C3",
-            "R2C3"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 2,
-          "width": 1,
-          "category": "easy",
-          "color": "#99dd99",
-          "batch_index": 12
-        },
-        {
-          "id": 19,
-          "display_id": "A19",
-          "rect": [
-            0,
-            3,
-            0,
-            4
-          ],
-          "rect_human": "R1C4:R1C5",
-          "values": [
-            7,
-            3
-          ],
-          "positions": [
-            [
-              0,
-              3
-            ],
-            [
-              0,
-              4
-            ]
-          ],
-          "remove_positions": [
-            [
-              0,
-              3
-            ],
-            [
-              0,
-              4
-            ]
-          ],
-          "positions_human": [
-            "R1C4",
-            "R1C5"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 1,
-          "width": 2,
-          "category": "easy",
-          "color": "#cc99ff",
-          "batch_index": 13
-        },
-        {
-          "id": 20,
-          "display_id": "A20",
-          "rect": [
-            1,
-            1,
-            2,
-            1
-          ],
-          "rect_human": "R2C2:R3C2",
-          "values": [
-            8,
-            2
-          ],
-          "positions": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ]
-          ],
-          "remove_positions": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ]
-          ],
-          "positions_human": [
-            "R2C2",
-            "R3C2"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 2,
-          "width": 1,
-          "category": "easy",
-          "color": "#ffb366",
-          "batch_index": 14
-        },
-        {
-          "id": 23,
-          "display_id": "A23",
-          "rect": [
-            2,
-            8,
-            3,
-            8
-          ],
-          "rect_human": "R3C9:R4C9",
-          "values": [
-            5,
-            5
-          ],
-          "positions": [
-            [
-              2,
-              8
-            ],
-            [
-              3,
-              8
-            ]
-          ],
-          "remove_positions": [
-            [
-              2,
-              8
-            ],
-            [
-              3,
-              8
-            ]
-          ],
-          "positions_human": [
-            "R3C9",
-            "R4C9"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 2,
-          "width": 1,
-          "category": "easy",
-          "color": "#66cccc",
-          "batch_index": 15
-        },
-        {
-          "id": 25,
-          "display_id": "A25",
-          "rect": [
-            4,
-            2,
-            5,
-            2
-          ],
-          "rect_human": "R5C3:R6C3",
-          "values": [
-            6,
-            4
-          ],
-          "positions": [
-            [
-              4,
-              2
-            ],
-            [
-              5,
-              2
-            ]
-          ],
-          "remove_positions": [
-            [
-              4,
-              2
-            ],
-            [
-              5,
-              2
-            ]
-          ],
-          "positions_human": [
-            "R5C3",
-            "R6C3"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 2,
-          "width": 1,
-          "category": "easy",
-          "color": "#f2a6d8",
-          "batch_index": 16
-        },
-        {
-          "id": 27,
-          "display_id": "A27",
-          "rect": [
-            5,
-            4,
-            5,
-            5
-          ],
-          "rect_human": "R6C5:R6C6",
-          "values": [
-            2,
-            8
-          ],
-          "positions": [
-            [
-              5,
-              4
-            ],
-            [
-              5,
-              5
-            ]
-          ],
-          "remove_positions": [
-            [
-              5,
-              4
-            ],
-            [
-              5,
-              5
-            ]
-          ],
-          "positions_human": [
-            "R6C5",
-            "R6C6"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 1,
-          "width": 2,
-          "category": "easy",
-          "color": "#ffcc66",
-          "batch_index": 17
-        },
-        {
-          "id": 28,
-          "display_id": "A28",
-          "rect": [
-            5,
-            6,
-            6,
-            6
-          ],
-          "rect_human": "R6C7:R7C7",
-          "values": [
-            7,
-            3
-          ],
-          "positions": [
-            [
-              5,
-              6
-            ],
-            [
-              6,
-              6
-            ]
-          ],
-          "remove_positions": [
-            [
-              5,
-              6
-            ],
-            [
-              6,
-              6
-            ]
-          ],
-          "positions_human": [
-            "R6C7",
-            "R7C7"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 2,
-          "width": 1,
-          "category": "easy",
-          "color": "#99ccff",
-          "batch_index": 18
-        },
-        {
-          "id": 29,
-          "display_id": "A29",
-          "rect": [
-            6,
-            1,
-            6,
-            2
-          ],
-          "rect_human": "R7C2:R7C3",
-          "values": [
-            4,
-            6
-          ],
-          "positions": [
-            [
-              6,
-              1
-            ],
-            [
-              6,
-              2
-            ]
-          ],
-          "remove_positions": [
-            [
-              6,
-              1
-            ],
-            [
-              6,
-              2
-            ]
-          ],
-          "positions_human": [
-            "R7C2",
-            "R7C3"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 1,
-          "width": 2,
-          "category": "easy",
-          "color": "#ff9999",
-          "batch_index": 19
-        },
-        {
-          "id": 32,
-          "display_id": "A32",
-          "rect": [
-            7,
-            2,
-            8,
-            2
-          ],
-          "rect_human": "R8C3:R9C3",
-          "values": [
-            7,
-            3
-          ],
-          "positions": [
-            [
-              7,
-              2
-            ],
-            [
-              8,
-              2
-            ]
-          ],
-          "remove_positions": [
-            [
-              7,
-              2
-            ],
-            [
-              8,
-              2
-            ]
-          ],
-          "positions_human": [
-            "R8C3",
-            "R9C3"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 2,
-          "width": 1,
-          "category": "easy",
-          "color": "#99dd99",
-          "batch_index": 20
-        },
-        {
-          "id": 34,
-          "display_id": "A34",
-          "rect": [
-            8,
-            0,
-            9,
-            0
-          ],
-          "rect_human": "R9C1:R10C1",
-          "values": [
-            9,
-            1
-          ],
-          "positions": [
-            [
-              8,
-              0
-            ],
-            [
-              9,
-              0
-            ]
-          ],
-          "remove_positions": [
-            [
-              8,
-              0
-            ],
-            [
-              9,
-              0
-            ]
-          ],
-          "positions_human": [
-            "R9C1",
-            "R10C1"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 2,
-          "width": 1,
-          "category": "easy",
-          "color": "#cc99ff",
-          "batch_index": 21
-        },
-        {
-          "id": 36,
-          "display_id": "A36",
-          "rect": [
-            10,
-            2,
-            10,
-            3
-          ],
-          "rect_human": "R11C3:R11C4",
-          "values": [
-            7,
-            3
-          ],
-          "positions": [
-            [
-              10,
-              2
-            ],
-            [
-              10,
-              3
-            ]
-          ],
-          "remove_positions": [
-            [
-              10,
-              2
-            ],
-            [
-              10,
-              3
-            ]
-          ],
-          "positions_human": [
-            "R11C3",
-            "R11C4"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 1,
-          "width": 2,
-          "category": "easy",
-          "color": "#ffb366",
-          "batch_index": 22
-        },
-        {
-          "id": 38,
-          "display_id": "A38",
-          "rect": [
-            10,
-            6,
-            10,
-            7
-          ],
-          "rect_human": "R11C7:R11C8",
-          "values": [
-            9,
-            1
-          ],
-          "positions": [
-            [
-              10,
-              6
-            ],
-            [
-              10,
-              7
-            ]
-          ],
-          "remove_positions": [
-            [
-              10,
-              6
-            ],
-            [
-              10,
-              7
-            ]
-          ],
-          "positions_human": [
-            "R11C7",
-            "R11C8"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 1,
-          "width": 2,
-          "category": "easy",
-          "color": "#66cccc",
-          "batch_index": 23
-        },
-        {
-          "id": 39,
-          "display_id": "A39",
-          "rect": [
-            11,
-            1,
-            12,
-            1
-          ],
-          "rect_human": "R12C2:R13C2",
-          "values": [
-            6,
-            4
-          ],
-          "positions": [
-            [
-              11,
-              1
-            ],
-            [
-              12,
-              1
-            ]
-          ],
-          "remove_positions": [
-            [
-              11,
-              1
-            ],
-            [
-              12,
-              1
-            ]
-          ],
-          "positions_human": [
-            "R12C2",
-            "R13C2"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 2,
-          "width": 1,
-          "category": "easy",
-          "color": "#f2a6d8",
-          "batch_index": 24
-        },
-        {
-          "id": 41,
-          "display_id": "A41",
-          "rect": [
-            11,
-            7,
-            12,
-            7
-          ],
-          "rect_human": "R12C8:R13C8",
-          "values": [
-            5,
-            5
-          ],
-          "positions": [
-            [
-              11,
-              7
-            ],
-            [
-              12,
-              7
-            ]
-          ],
-          "remove_positions": [
-            [
-              11,
-              7
-            ],
-            [
-              12,
-              7
-            ]
-          ],
-          "positions_human": [
-            "R12C8",
-            "R13C8"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 2,
-          "width": 1,
-          "category": "easy",
-          "color": "#ffcc66",
-          "batch_index": 25
-        },
-        {
-          "id": 42,
-          "display_id": "A42",
-          "rect": [
-            12,
-            3,
-            12,
-            4
-          ],
-          "rect_human": "R13C4:R13C5",
-          "values": [
-            4,
-            6
-          ],
-          "positions": [
-            [
-              12,
-              3
-            ],
-            [
-              12,
-              4
-            ]
-          ],
-          "remove_positions": [
-            [
-              12,
-              3
-            ],
-            [
-              12,
-              4
-            ]
-          ],
-          "positions_human": [
-            "R13C4",
-            "R13C5"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 1,
-          "width": 2,
-          "category": "easy",
-          "color": "#99ccff",
-          "batch_index": 26
-        },
-        {
-          "id": 43,
-          "display_id": "A43",
-          "rect": [
-            12,
-            5,
-            12,
-            6
-          ],
-          "rect_human": "R13C6:R13C7",
-          "values": [
-            9,
-            1
-          ],
-          "positions": [
-            [
-              12,
-              5
-            ],
-            [
-              12,
-              6
-            ]
-          ],
-          "remove_positions": [
-            [
-              12,
-              5
-            ],
-            [
-              12,
-              6
-            ]
-          ],
-          "positions_human": [
-            "R13C6",
-            "R13C7"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 1,
-          "width": 2,
-          "category": "easy",
-          "color": "#ff9999",
-          "batch_index": 27
-        },
-        {
-          "id": 44,
-          "display_id": "A44",
-          "rect": [
-            13,
-            2,
-            13,
-            3
-          ],
-          "rect_human": "R14C3:R14C4",
-          "values": [
-            3,
-            7
-          ],
-          "positions": [
-            [
-              13,
-              2
-            ],
-            [
-              13,
-              3
-            ]
-          ],
-          "remove_positions": [
-            [
-              13,
-              2
-            ],
-            [
-              13,
-              3
-            ]
-          ],
-          "positions_human": [
-            "R14C3",
-            "R14C4"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 1,
-          "width": 2,
-          "category": "easy",
-          "color": "#99dd99",
-          "batch_index": 28
-        },
-        {
-          "id": 46,
-          "display_id": "A46",
-          "rect": [
-            13,
-            4,
-            13,
-            5
-          ],
-          "rect_human": "R14C5:R14C6",
-          "values": [
-            8,
-            2
-          ],
-          "positions": [
-            [
-              13,
-              4
-            ],
-            [
-              13,
-              5
-            ]
-          ],
-          "remove_positions": [
-            [
-              13,
-              4
-            ],
-            [
-              13,
-              5
-            ]
-          ],
-          "positions_human": [
-            "R14C5",
-            "R14C6"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 1,
-          "width": 2,
-          "category": "easy",
-          "color": "#cc99ff",
-          "batch_index": 29
-        },
-        {
-          "id": 48,
-          "display_id": "A48",
-          "rect": [
-            14,
-            8,
-            14,
-            9
-          ],
-          "rect_human": "R15C9:R15C10",
-          "values": [
-            8,
-            2
-          ],
-          "positions": [
-            [
-              14,
-              8
-            ],
-            [
-              14,
-              9
-            ]
-          ],
-          "remove_positions": [
-            [
-              14,
-              8
-            ],
-            [
-              14,
-              9
-            ]
-          ],
-          "positions_human": [
-            "R15C9",
-            "R15C10"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 1,
-          "width": 2,
-          "category": "easy",
-          "color": "#ffb366",
-          "batch_index": 30
-        },
-        {
-          "id": 49,
-          "display_id": "A49",
-          "rect": [
-            15,
-            7,
-            15,
-            8
-          ],
-          "rect_human": "R16C8:R16C9",
-          "values": [
-            7,
-            3
-          ],
-          "positions": [
-            [
-              15,
-              7
-            ],
-            [
-              15,
-              8
-            ]
-          ],
-          "remove_positions": [
-            [
-              15,
-              7
-            ],
-            [
-              15,
-              8
-            ]
-          ],
-          "positions_human": [
-            "R16C8",
-            "R16C9"
-          ],
-          "sum": 10,
-          "area": 2,
-          "removed_count": 2,
-          "bonus": 0,
-          "move_score": 2,
-          "height": 1,
-          "width": 2,
-          "category": "easy",
-          "color": "#66cccc",
-          "batch_index": 31
-        }
-      ],
-      "round_score": 75,
-      "total_score": 75,
-      "selected_algorithm": "beam_removed",
-      "candidate_results": [
-        {
-          "name": "greedy_removed",
-          "batch_size": 30,
-          "removed_count": 73,
-          "predicted_total_removed": 86,
-          "round_count": 3
-        },
-        {
-          "name": "greedy_compact",
-          "batch_size": 30,
-          "removed_count": 73,
-          "predicted_total_removed": 86,
-          "round_count": 3
-        },
-        {
-          "name": "greedy_easy",
-          "batch_size": 30,
-          "removed_count": 73,
-          "predicted_total_removed": 86,
-          "round_count": 3
-        },
-        {
-          "name": "greedy_density",
-          "batch_size": 30,
-          "removed_count": 73,
-          "predicted_total_removed": 84,
-          "round_count": 3
-        },
-        {
-          "name": "beam_removed",
-          "batch_size": 31,
-          "removed_count": 75,
-          "predicted_total_removed": 86,
-          "round_count": 2
-        },
-        {
-          "name": "beam_compact",
-          "batch_size": 31,
-          "removed_count": 75,
-          "predicted_total_removed": 86,
-          "round_count": 2
-        },
-        {
-          "name": "beam_density",
-          "batch_size": 31,
-          "removed_count": 75,
-          "predicted_total_removed": 84,
-          "round_count": 2
-        }
-      ]
-    }
-  ]
+  "round_count": 0,
+  "removed_count": 0,
+  "remaining_count": 160,
+  "total_score": 0,
+  "rounds": []
 }
