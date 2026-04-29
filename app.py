@@ -5,7 +5,7 @@ import shutil
 import sys
 import tkinter as tk
 from pathlib import Path
-from tkinter import messagebox, ttk
+from tkinter import filedialog, messagebox, ttk
 
 import cv2
 import numpy as np
@@ -14,6 +14,7 @@ import numpy as np
 CANVAS_SIZE = 64
 TARGET_SUM = 10
 LOW_CONFIDENCE_THRESHOLD = 0.15
+DEFAULT_BEAM_WIDTH = 50
 BATCH_COLORS = [
     "#ffcc66",
     "#99ccff",
@@ -45,6 +46,24 @@ def parse_args():
         type=int,
         default=3,
         help="Inner trim in pixels applied to each cropped tile, default: 3",
+    )
+    parser.add_argument(
+        "--strategy",
+        choices=["greedy", "beam", "multi"],
+        default="multi",
+        help="Batch selection strategy, default: multi",
+    )
+    parser.add_argument(
+        "--beam-width",
+        type=int,
+        default=DEFAULT_BEAM_WIDTH,
+        help="Beam width for beam strategy, default: 50",
+    )
+    parser.add_argument(
+        "--lookahead",
+        type=int,
+        default=0,
+        help="Number of future rounds to simulate, default: 0",
     )
     return parser.parse_args()
 
@@ -582,6 +601,34 @@ def classify_move(height: int, width: int, area: int) -> str:
     return "large"
 
 
+def compute_move_bonus(removed_count: int) -> int:
+    if removed_count == 3:
+        return 3
+    if removed_count == 4:
+        return 4
+    return 0
+
+
+def board_key(board: list[list[int]]) -> tuple[int, ...]:
+    return tuple(value for row in board for value in row)
+
+
+def batch_score(batch_moves: list[dict]) -> int:
+    return sum(move["move_score"] for move in batch_moves)
+
+
+def count_combo_moves(batch_moves: list[dict], removed_count: int) -> int:
+    return sum(1 for move in batch_moves if move["removed_count"] == removed_count)
+
+
+def move_remove_position_set(move: dict) -> frozenset[tuple[int, int]]:
+    return frozenset((row, col) for row, col in move["remove_positions"])
+
+
+def batch_removed_count(batch_moves: list[dict]) -> int:
+    return sum(move["removed_count"] for move in batch_moves)
+
+
 def find_valid_moves(board: list[list[int]]) -> list[dict]:
     rows = len(board)
     cols = len(board[0]) if rows else 0
@@ -619,6 +666,9 @@ def find_valid_moves(board: list[list[int]]) -> list[dict]:
                     width = c2 - c1 + 1
                     area = height * width
                     category = classify_move(height, width, area)
+                    removed_count = len(values)
+                    bonus = 0
+                    move_score = removed_count
                     moves.append(
                         {
                             "id": 0,
@@ -631,7 +681,9 @@ def find_valid_moves(board: list[list[int]]) -> list[dict]:
                             "positions_human": [cell_human(row, col) for row, col in positions],
                             "sum": total,
                             "area": area,
-                            "removed_count": len(values),
+                            "removed_count": removed_count,
+                            "bonus": bonus,
+                            "move_score": move_score,
                             "height": height,
                             "width": width,
                             "category": category,
@@ -642,20 +694,53 @@ def find_valid_moves(board: list[list[int]]) -> list[dict]:
     return moves
 
 
-def sort_moves_for_batch(moves: list[dict]) -> list[dict]:
-    sorted_moves = sorted(
-        moves,
-        key=lambda move: (
+def sort_moves_for_batch(moves: list[dict], mode: str = "removed") -> list[dict]:
+    if mode == "easy":
+        key_func = lambda move: (
             0 if move["category"] == "easy" else 1,
-            move["area"],
             -move["removed_count"],
+            move["area"],
             max(move["height"], move["width"]),
             move["rect"][0],
             move["rect"][1],
             move["rect"][2],
             move["rect"][3],
-        ),
-    )
+        )
+    elif mode == "compact":
+        key_func = lambda move: (
+            -move["removed_count"],
+            move["area"],
+            max(move["height"], move["width"]),
+            0 if move["category"] == "easy" else 1,
+            move["rect"][0],
+            move["rect"][1],
+            move["rect"][2],
+            move["rect"][3],
+        )
+    elif mode == "density":
+        key_func = lambda move: (
+            -(move["removed_count"] / max(move["area"], 1)),
+            -move["removed_count"],
+            move["area"],
+            0 if move["category"] == "easy" else 1,
+            move["rect"][0],
+            move["rect"][1],
+            move["rect"][2],
+            move["rect"][3],
+        )
+    else:
+        key_func = lambda move: (
+            -move["removed_count"],
+            move["area"],
+            0 if move["category"] == "easy" else 1,
+            max(move["height"], move["width"]),
+            move["rect"][0],
+            move["rect"][1],
+            move["rect"][2],
+            move["rect"][3],
+        )
+
+    sorted_moves = sorted(moves, key=key_func)
 
     easy_index = 0
     large_index = 0
@@ -670,21 +755,263 @@ def sort_moves_for_batch(moves: list[dict]) -> list[dict]:
     return sorted_moves
 
 
-def select_non_overlapping_batch(moves: list[dict]) -> list[dict]:
+def greedy_select_non_overlapping_batch(moves: list[dict], mode: str = "removed") -> list[dict]:
     selected = []
     used_positions = set()
 
-    for move in sort_moves_for_batch(moves):
-        remove_positions = {tuple(pos) for pos in move["remove_positions"]}
+    for move in sort_moves_for_batch(moves, mode=mode):
+        remove_positions = move_remove_position_set(move)
         if remove_positions & used_positions:
             continue
         selected.append(move.copy())
         used_positions.update(remove_positions)
 
-    for index, move in enumerate(selected):
-        move["color"] = BATCH_COLORS[index % len(BATCH_COLORS)]
-
     return selected
+
+
+def beam_select_candidate_batches(
+    moves: list[dict],
+    beam_width: int = DEFAULT_BEAM_WIDTH,
+    top_k: int = 12,
+    mode: str = "removed",
+) -> list[list[dict]]:
+    sorted_moves = sort_moves_for_batch([move.copy() for move in moves], mode=mode)
+    states = [
+        {
+            "selected": [],
+            "used": frozenset(),
+            "removed": 0,
+            "move_count": 0,
+            "area": 0,
+        }
+    ]
+
+    for move in sorted_moves:
+        remove_positions = move_remove_position_set(move)
+        next_states = list(states)
+
+        for state in states:
+            if state["used"] & remove_positions:
+                continue
+            next_states.append(
+                {
+                    "selected": state["selected"] + [move.copy()],
+                    "used": state["used"] | remove_positions,
+                    "removed": state["removed"] + move["removed_count"],
+                    "move_count": state["move_count"] + 1,
+                    "area": state["area"] + move["area"],
+                }
+            )
+
+        deduped = {}
+        for state in next_states:
+            key = state["used"]
+            current = deduped.get(key)
+            if current is None:
+                deduped[key] = state
+                continue
+            current_rank = (
+                current["removed"],
+                -current["area"],
+                current["move_count"],
+            )
+            new_rank = (
+                state["removed"],
+                -state["area"],
+                state["move_count"],
+            )
+            if new_rank > current_rank:
+                deduped[key] = state
+
+        states = sorted(
+            deduped.values(),
+            key=lambda state: (
+                state["removed"],
+                -state["area"],
+                state["move_count"],
+            ),
+            reverse=True,
+        )[: max(1, beam_width)]
+
+    final_states = sorted(
+        states,
+        key=lambda state: (
+            state["removed"],
+            -state["area"],
+            state["move_count"],
+        ),
+        reverse=True,
+    )
+    return [state["selected"] for state in final_states[: max(1, top_k)]]
+
+
+def assign_batch_visuals(batch_moves: list[dict]) -> list[dict]:
+    assigned = [move.copy() for move in batch_moves]
+    for index, move in enumerate(assigned, start=1):
+        move["batch_index"] = index
+        move["color"] = BATCH_COLORS[(index - 1) % len(BATCH_COLORS)]
+    return assigned
+
+
+def get_algorithm_specs(strategy: str, beam_width: int) -> list[dict]:
+    if strategy == "greedy":
+        return [{"name": "greedy_removed", "kind": "greedy", "mode": "removed"}]
+    if strategy == "beam":
+        return [{"name": "beam_removed", "kind": "beam", "mode": "removed", "width": beam_width}]
+    return [
+        {"name": "greedy_removed", "kind": "greedy", "mode": "removed"},
+        {"name": "greedy_compact", "kind": "greedy", "mode": "compact"},
+        {"name": "greedy_easy", "kind": "greedy", "mode": "easy"},
+        {"name": "greedy_density", "kind": "greedy", "mode": "density"},
+        {"name": "beam_removed", "kind": "beam", "mode": "removed", "width": beam_width},
+        {"name": "beam_compact", "kind": "beam", "mode": "compact", "width": max(20, beam_width // 2)},
+        {"name": "beam_density", "kind": "beam", "mode": "density", "width": max(20, beam_width // 2)},
+    ]
+
+
+def candidate_batches_for_spec(candidate_moves: list[dict], spec: dict) -> list[list[dict]]:
+    if not candidate_moves:
+        return []
+    if spec["kind"] == "greedy":
+        return [greedy_select_non_overlapping_batch(candidate_moves, mode=spec["mode"])]
+    top_k = min(max(4, spec["width"] // 4), 12)
+    return beam_select_candidate_batches(
+        candidate_moves,
+        beam_width=spec["width"],
+        top_k=top_k,
+        mode=spec["mode"],
+    )
+
+
+def select_batch_for_spec(
+    board: list[list[int]],
+    spec: dict,
+    lookahead: int = 0,
+    memo: dict | None = None,
+) -> tuple[int, list[dict]]:
+    if memo is None:
+        memo = {}
+
+    key = (board_key(board), spec["name"], lookahead)
+    cached = memo.get(key)
+    if cached is not None:
+        return cached
+
+    current_moves = find_valid_moves(board)
+    candidate_batches = candidate_batches_for_spec(current_moves, spec)
+    if not candidate_batches:
+        result = (0, [])
+        memo[key] = result
+        return result
+
+    best_total_removed = -1
+    best_batch: list[dict] = []
+
+    for batch in candidate_batches:
+        current_removed = batch_removed_count(batch)
+        future_removed = 0
+        if lookahead > 0:
+            next_board = apply_round(board, batch)
+            future_removed, _ = select_batch_for_spec(next_board, spec, lookahead - 1, memo)
+        total_removed = current_removed + future_removed
+        rank = (
+            total_removed,
+            current_removed,
+            len(batch),
+            -sum(move["area"] for move in batch),
+        )
+        best_rank = (
+            best_total_removed,
+            batch_removed_count(best_batch),
+            len(best_batch),
+            -sum(move["area"] for move in best_batch) if best_batch else float("-inf"),
+        )
+        if rank > best_rank:
+            best_total_removed = total_removed
+            best_batch = batch
+
+    result = (best_total_removed if best_total_removed >= 0 else 0, best_batch)
+    memo[key] = result
+    return result
+
+
+def solve_board_with_spec(
+    board: list[list[int]],
+    spec: dict,
+    lookahead: int = 0,
+) -> dict:
+    memo: dict = {}
+    current_board = clone_board(board)
+    rounds: list[list[dict]] = []
+    round_scores: list[int] = []
+
+    while True:
+        _, batch = select_batch_for_spec(current_board, spec, lookahead=lookahead, memo=memo)
+        if not batch:
+            break
+        rounds.append([move.copy() for move in batch])
+        round_scores.append(batch_removed_count(batch))
+        current_board = apply_round(current_board, batch)
+
+    total_removed = sum(round_scores)
+    return {
+        "name": spec["name"],
+        "rounds": rounds,
+        "round_scores": round_scores,
+        "total_removed": total_removed,
+        "remaining_count": count_non_zero(current_board),
+        "final_board": current_board,
+        "round_count": len(rounds),
+    }
+
+
+def select_non_overlapping_batch(
+    board: list[list[int]],
+    moves: list[dict],
+    strategy: str = "multi",
+    beam_width: int = DEFAULT_BEAM_WIDTH,
+    lookahead: int = 0,
+) -> tuple[list[dict], dict]:
+    specs = get_algorithm_specs(strategy, beam_width)
+    candidate_results = []
+    best_solution = None
+    best_rank = None
+
+    for spec in specs:
+        solution = solve_board_with_spec(board, spec, lookahead=lookahead)
+        candidate_results.append(
+            {
+                "name": solution["name"],
+                "batch_size": len(solution["rounds"][0]) if solution["rounds"] else 0,
+                "removed_count": solution["round_scores"][0] if solution["round_scores"] else 0,
+                "predicted_total_removed": solution["total_removed"],
+                "round_count": solution["round_count"],
+            }
+        )
+        rank = (
+            solution["total_removed"],
+            solution["round_scores"][0] if solution["round_scores"] else 0,
+            solution["round_count"],
+            -solution["remaining_count"],
+        )
+        if best_rank is None or rank > best_rank:
+            best_rank = rank
+            best_solution = solution
+
+    if best_solution is None or not best_solution["rounds"]:
+        return [], {
+            "selected_algorithm": specs[0]["name"] if specs else "none",
+            "candidate_results": candidate_results,
+            "predicted_total_removed": 0,
+        }
+
+    best_batch = assign_batch_visuals(best_solution["rounds"][0])
+    return best_batch, {
+        "selected_algorithm": best_solution["name"],
+        "candidate_results": candidate_results,
+        "predicted_total_removed": best_solution["total_removed"],
+        "predicted_round_count": best_solution["round_count"],
+    }
 
 
 def apply_round(board: list[list[int]], batch_moves: list[dict]) -> list[list[int]]:
@@ -698,7 +1025,10 @@ def apply_round(board: list[list[int]], batch_moves: list[dict]) -> list[list[in
 def format_move(move: dict, index_in_round: int | None = None) -> str:
     prefix = f"{index_in_round}. " if index_in_round is not None else f"{move['display_id']}. "
     values_text = " + ".join(str(value) for value in move["values"])
-    return f"{prefix}{move['rect_human']} | {values_text} = {move['sum']}"
+    return (
+        f"{prefix}{move['rect_human']} | {values_text} = {move['sum']} | "
+        f"remove={move['removed_count']} | score={move['move_score']}"
+    )
 
 
 def save_board(
@@ -724,18 +1054,69 @@ def save_board(
     (output_dir / "board.txt").write_text(board_to_text(board) + "\n", encoding="utf-8")
 
 
+def run_image_pipeline(
+    image_path: Path,
+    rows: int,
+    cols: int,
+    templates_dir: Path,
+    output_dir: Path,
+    tile_trim: int,
+) -> tuple[list[list[int]], dict]:
+    tile_paths, tile_meta, crop_method = crop_tiles(
+        image_path,
+        rows,
+        cols,
+        output_dir,
+        tile_trim=tile_trim,
+    )
+    flat_numbers, board, recognition_details = recognize_board(
+        tile_paths,
+        templates_dir,
+        rows,
+        cols,
+    )
+    save_board(
+        output_dir,
+        rows,
+        cols,
+        flat_numbers,
+        board,
+        recognition_details,
+        tile_meta,
+        crop_method,
+    )
+    save_history(output_dir, board, board, [])
+
+    low_confidence = [
+        detail for detail in recognition_details if detail["confidence"] < LOW_CONFIDENCE_THRESHOLD
+    ]
+
+    pipeline_data = {
+        "image_path": str(image_path),
+        "crop_method": crop_method,
+        "tile_meta": tile_meta,
+        "flat_numbers": flat_numbers,
+        "recognition_details": recognition_details,
+        "low_confidence": low_confidence,
+        "all_moves": find_valid_moves(board),
+    }
+    return board, pipeline_data
+
+
 def save_history(
     output_dir: Path,
     original_board: list[list[int]],
     current_board: list[list[int]],
     round_history: list[dict],
 ):
+    total_score = sum(round_item.get("round_score", 0) for round_item in round_history)
     history_json = {
         "original_board": original_board,
         "current_board": current_board,
         "round_count": len(round_history),
         "removed_count": count_non_zero(original_board) - count_non_zero(current_board),
         "remaining_count": count_non_zero(current_board),
+        "total_score": total_score,
         "rounds": round_history,
     }
     (output_dir / "history.json").write_text(json.dumps(history_json, indent=2), encoding="utf-8")
@@ -751,8 +1132,13 @@ def save_history(
                 values_text = " + ".join(str(value) for value in move["values"])
                 cells_text = ", ".join(move["positions_human"])
                 lines.append(
-                    f"{index}. Select {move['rect_human']} | {values_text} = {move['sum']} | cells {cells_text}"
+                    f"{index}. {move['rect_human']} | {values_text} = {move['sum']} | "
+                    f"remove={move['removed_count']} | score={move['move_score']} | cells {cells_text}"
                 )
+            lines.append(f"Round score: {round_item.get('round_score', 0)}")
+            lines.append(f"Total score: {round_item.get('total_score', 0)}")
+            if round_item.get("selected_algorithm"):
+                lines.append(f"Selected algorithm: {round_item['selected_algorithm']}")
             lines.append("")
 
     lines.append("Current board:")
@@ -760,42 +1146,58 @@ def save_history(
     lines.append("")
     lines.append(f"Removed count: {history_json['removed_count']}")
     lines.append(f"Remaining count: {history_json['remaining_count']}")
+    lines.append(f"Total score: {total_score}")
     (output_dir / "history.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 class GameHelperApp:
-    def __init__(self, root: tk.Tk, original_board: list[list[int]], output_dir: Path):
+    def __init__(
+        self,
+        root: tk.Tk,
+        original_board: list[list[int]],
+        output_dir: Path,
+        next_round_callback,
+        strategy: str,
+        beam_width: int,
+        lookahead: int,
+    ):
         self.root = root
-        self.root.title("Number Elimination Batch Helper")
-        self.root.geometry("760x860")
         self.output_dir = output_dir
+        self.next_round_callback = next_round_callback
+        self.strategy = strategy
+        self.beam_width = beam_width
+        self.lookahead = lookahead
         self.original_board = clone_board(original_board)
         self.current_board = clone_board(original_board)
         self.round_history: list[dict] = []
         self.all_possible_moves: list[dict] = []
         self.current_batch: list[dict] = []
+        self.current_batch_info: dict = {}
         self.status_var = tk.StringVar()
 
         self.rows = len(original_board)
         self.cols = len(original_board[0]) if self.rows else 0
-        self.cell_size = 34
-        self.left_margin = 52
-        self.top_margin = 32
+        self.cell_size = 29
+        self.left_margin = 44
+        self.top_margin = 26
         self.board_canvas: tk.Canvas | None = None
+        self.main_frame: ttk.Frame | None = None
 
         self.build_layout()
         self.recalculate_batch()
 
     def build_layout(self):
+        self.root.title("Number Elimination Batch Helper")
+        self.root.geometry("760x860")
         self.root.columnconfigure(0, weight=1)
         self.root.rowconfigure(0, weight=1)
 
-        main_frame = ttk.Frame(self.root, padding=10)
-        main_frame.grid(row=0, column=0, sticky="nsew")
-        main_frame.columnconfigure(0, weight=1)
-        main_frame.rowconfigure(1, weight=1)
+        self.main_frame = ttk.Frame(self.root, padding=10)
+        self.main_frame.grid(row=0, column=0, sticky="nsew")
+        self.main_frame.columnconfigure(0, weight=1)
+        self.main_frame.rowconfigure(1, weight=1)
 
-        info_frame = ttk.LabelFrame(main_frame, text="Board Status", padding=10)
+        info_frame = ttk.LabelFrame(self.main_frame, text="Board Status", padding=10)
         info_frame.grid(row=0, column=0, sticky="ew", pady=(0, 10))
         ttk.Label(
             info_frame,
@@ -804,7 +1206,7 @@ class GameHelperApp:
             font=("Menlo", 11),
         ).pack(anchor="w")
 
-        board_frame = ttk.LabelFrame(main_frame, text="Current Round Board", padding=10)
+        board_frame = ttk.LabelFrame(self.main_frame, text="Current Round Board", padding=10)
         board_frame.grid(row=1, column=0, sticky="nsew")
         board_frame.columnconfigure(0, weight=1)
         board_frame.rowconfigure(0, weight=1)
@@ -819,9 +1221,9 @@ class GameHelperApp:
             highlightthickness=0,
         )
         self.board_canvas.grid(row=0, column=0, sticky="nsew")
-        button_frame = ttk.Frame(main_frame, padding=(0, 10, 0, 0))
+        button_frame = ttk.Frame(self.main_frame, padding=(0, 10, 0, 0))
         button_frame.grid(row=2, column=0, sticky="ew")
-        for column in range(5):
+        for column in range(3):
             button_frame.columnconfigure(column, weight=1)
 
         ttk.Button(button_frame, text="Apply This Round", command=self.apply_this_round).grid(
@@ -834,25 +1236,37 @@ class GameHelperApp:
             row=0, column=2, padx=4, pady=4, sticky="ew"
         )
         ttk.Button(button_frame, text="Reset", command=self.reset_board).grid(
-            row=0, column=3, padx=4, pady=4, sticky="ew"
+            row=1, column=0, padx=4, pady=4, sticky="ew"
         )
         ttk.Button(button_frame, text="Save History", command=self.save_history_now).grid(
-            row=0, column=4, padx=4, pady=4, sticky="ew"
+            row=1, column=1, padx=4, pady=4, sticky="ew"
         )
+        ttk.Button(button_frame, text="下一把", command=self.go_to_upload_screen).grid(
+            row=1, column=2, padx=4, pady=4, sticky="ew"
+        )
+
+    def total_score(self) -> int:
+        return sum(round_item.get("round_score", 0) for round_item in self.round_history)
 
     def refresh_status(self):
         round_number = len(self.round_history) + 1
         remaining_count = count_non_zero(self.current_board)
         removed_count = count_non_zero(self.original_board) - remaining_count
-        easy_count = sum(1 for move in self.current_batch if move["category"] == "easy")
-        large_count = len(self.current_batch) - easy_count
+        total_score = self.total_score()
+        selected_algorithm = self.current_batch_info.get("selected_algorithm", "none")
+        tried_algorithms = len(self.current_batch_info.get("candidate_results", []))
+        predicted_total_removed = self.current_batch_info.get("predicted_total_removed", total_score)
+        predicted_round_count = self.current_batch_info.get("predicted_round_count", 0)
         self.status_var.set(
+            f"Strategy: Max Removed ({self.strategy})\n"
             f"Round: {round_number}\n"
-            f"Remaining numbers: {remaining_count}\n"
             f"Removed numbers: {removed_count}\n"
             f"Current batch size: {len(self.current_batch)}\n"
-            f"Easy batch moves: {easy_count}\n"
-            f"Larger batch moves: {large_count}\n"
+            f"Total score: {total_score}\n"
+            f"Selected algorithm: {selected_algorithm}\n"
+            f"Algorithms tried: {tried_algorithms}\n"
+            f"Predicted final removed: {predicted_total_removed}\n"
+            f"Predicted rounds: {predicted_round_count}\n"
             f"All valid moves now: {len(self.all_possible_moves)}"
         )
 
@@ -862,11 +1276,11 @@ class GameHelperApp:
 
         for col in range(self.cols):
             x = self.left_margin + col * self.cell_size + self.cell_size / 2
-            canvas.create_text(x, 16, text=f"C{col + 1}", font=("Menlo", 9, "bold"))
+            canvas.create_text(x, 13, text=f"C{col + 1}", font=("Menlo", 8, "bold"))
 
         for row in range(self.rows):
             y = self.top_margin + row * self.cell_size + self.cell_size / 2
-            canvas.create_text(22, y, text=f"R{row + 1}", font=("Menlo", 9, "bold"))
+            canvas.create_text(18, y, text=f"R{row + 1}", font=("Menlo", 8, "bold"))
 
         cell_fill_map = {}
         cell_tag_map = {}
@@ -899,15 +1313,15 @@ class GameHelperApp:
                         (x1 + x2) / 2,
                         (y1 + y2) / 2 + 1,
                         text=text,
-                        font=("Menlo", 11, "bold"),
+                        font=("Menlo", 10, "bold"),
                         fill=text_color,
                     )
                 if (row, col) in cell_tag_map:
                     canvas.create_text(
-                        x1 + 8,
-                        y1 + 8,
+                        x1 + 7,
+                        y1 + 7,
                         text=cell_tag_map[(row, col)],
-                        font=("Menlo", 7, "bold"),
+                        font=("Menlo", 6, "bold"),
                         fill="#222222",
                     )
 
@@ -917,12 +1331,17 @@ class GameHelperApp:
             y1 = self.top_margin + r1 * self.cell_size + 2
             x2 = self.left_margin + (c2 + 1) * self.cell_size - 2
             y2 = self.top_margin + (r2 + 1) * self.cell_size - 2
-            canvas.create_rectangle(x1, y1, x2, y2, outline=move["color"], width=3)
+            border_width = 2
+            if move["removed_count"] == 3:
+                border_width = 3
+            elif move["removed_count"] >= 4:
+                border_width = 4
+            canvas.create_rectangle(x1, y1, x2, y2, outline=move["color"], width=border_width)
             canvas.create_text(
-                x1 + 10,
-                y1 + 12,
-                text=f"{index}",
-                font=("Menlo", 8, "bold"),
+                x1 + 15,
+                y1 + 10,
+                text=f"{index}/+{move['removed_count']}",
+                font=("Menlo", 7, "bold"),
                 fill="#111111",
             )
 
@@ -933,7 +1352,13 @@ class GameHelperApp:
 
     def recalculate_batch(self):
         self.all_possible_moves = find_valid_moves(self.current_board)
-        self.current_batch = select_non_overlapping_batch(self.all_possible_moves)
+        self.current_batch, self.current_batch_info = select_non_overlapping_batch(
+            self.current_board,
+            self.all_possible_moves,
+            strategy=self.strategy,
+            beam_width=self.beam_width,
+            lookahead=self.lookahead,
+        )
         self.refresh_ui()
 
     def apply_this_round(self):
@@ -944,12 +1369,18 @@ class GameHelperApp:
         round_number = len(self.round_history) + 1
         board_before = clone_board(self.current_board)
         board_after = apply_round(self.current_board, self.current_batch)
+        round_score = batch_score(self.current_batch)
+        total_score = self.total_score() + round_score
         self.round_history.append(
             {
                 "round": round_number,
                 "board_before": board_before,
                 "board_after": clone_board(board_after),
                 "moves": [move.copy() for move in self.current_batch],
+                "round_score": round_score,
+                "total_score": total_score,
+                "selected_algorithm": self.current_batch_info.get("selected_algorithm", "none"),
+                "candidate_results": self.current_batch_info.get("candidate_results", []),
             }
         )
         self.current_board = board_after
@@ -981,97 +1412,172 @@ class GameHelperApp:
         save_history(self.output_dir, self.original_board, self.current_board, self.round_history)
         messagebox.showinfo("Saved", f"Saved history to {self.output_dir}")
 
+    def go_to_upload_screen(self):
+        self.next_round_callback()
 
-def start_tkinter_gui(original_board: list[list[int]], output_dir: Path):
-    root = tk.Tk()
-    GameHelperApp(root, original_board, output_dir)
-    root.mainloop()
+    def destroy(self):
+        if self.main_frame is not None:
+            self.main_frame.destroy()
+
+
+class UploadScreen:
+    def __init__(self, root: tk.Tk, args):
+        self.root = root
+        self.args = args
+        self.templates_dir = Path(args.templates)
+        self.output_dir = Path(args.output)
+        self.current_game: GameHelperApp | None = None
+        self.main_frame: ttk.Frame | None = None
+        self.status_var = tk.StringVar(value="点击下方按钮选择图片")
+
+        self.show_upload_screen()
+
+    def show_upload_screen(self):
+        if self.current_game is not None:
+            self.current_game.destroy()
+            self.current_game = None
+        if self.main_frame is not None:
+            self.main_frame.destroy()
+
+        self.root.title("Upload Board Image")
+        self.root.geometry("420x220")
+        self.root.columnconfigure(0, weight=1)
+        self.root.rowconfigure(0, weight=1)
+
+        self.main_frame = ttk.Frame(self.root, padding=20)
+        self.main_frame.grid(row=0, column=0, sticky="nsew")
+        self.main_frame.columnconfigure(0, weight=1)
+
+        ttk.Label(
+            self.main_frame,
+            text="上传棋盘截图",
+            font=("Menlo", 16, "bold"),
+            anchor="center",
+        ).grid(row=0, column=0, pady=(0, 12))
+
+        ttk.Label(
+            self.main_frame,
+            textvariable=self.status_var,
+            justify="center",
+            font=("Menlo", 10),
+        ).grid(row=1, column=0, pady=(0, 12))
+
+        button_frame = ttk.Frame(self.main_frame)
+        button_frame.grid(row=2, column=0, sticky="ew")
+        for col in range(2):
+            button_frame.columnconfigure(col, weight=1)
+
+        ttk.Button(button_frame, text="选择图片", command=self.choose_image).grid(
+            row=0, column=0, padx=6, pady=4, sticky="ew"
+        )
+        ttk.Button(button_frame, text="退出", command=self.root.destroy).grid(
+            row=0, column=1, padx=6, pady=4, sticky="ew"
+        )
+
+    def choose_image(self):
+        file_path = filedialog.askopenfilename(
+            title="选择棋盘截图",
+            filetypes=[
+                ("Image Files", "*.png *.jpg *.jpeg *.bmp"),
+                ("PNG Files", "*.png"),
+                ("All Files", "*.*"),
+            ],
+        )
+        if not file_path:
+            return
+        self.open_image(Path(file_path))
+
+    def open_image(self, image_path: Path):
+        if not image_path.exists():
+            messagebox.showerror("File Not Found", f"找不到图片文件:\n{image_path}")
+            return
+
+        if not self.templates_dir.exists():
+            messagebox.showerror("Missing Templates", f"找不到模板目录:\n{self.templates_dir}")
+            return
+
+        self.status_var.set(f"正在处理: {image_path.name}")
+        self.root.update_idletasks()
+
+        try:
+            ensure_dir(self.output_dir)
+            board, pipeline_data = run_image_pipeline(
+                image_path=image_path,
+                rows=self.args.rows,
+                cols=self.args.cols,
+                templates_dir=self.templates_dir,
+                output_dir=self.output_dir,
+                tile_trim=self.args.tile_trim,
+            )
+        except Exception as exc:
+            messagebox.showerror("Processing Failed", f"图片处理失败:\n{exc}")
+            self.status_var.set("点击下方按钮选择图片")
+            return
+
+        print(
+            f"Cropped {self.args.rows * self.args.cols} tiles to {self.output_dir / 'temp'} "
+            f"using {pipeline_data['crop_method']} with tile trim {self.args.tile_trim}px."
+        )
+        print("\nRecognized board")
+        print("----------------")
+        print(board_to_text(board))
+        if pipeline_data["low_confidence"]:
+            print("\nLow confidence warnings")
+            print("-----------------------")
+            for detail in pipeline_data["low_confidence"]:
+                print(
+                    f"{detail['file']}: digit={detail['digit']}, confidence={detail['confidence']:.3f}, "
+                    f"score={detail['score']:.1f}, holes={detail['hole_count']}"
+                )
+        print(f"\nAll valid moves: {len(pipeline_data['all_moves'])}")
+        batch, batch_info = select_non_overlapping_batch(
+            board,
+            pipeline_data["all_moves"],
+            strategy=self.args.strategy,
+            beam_width=self.args.beam_width,
+            lookahead=self.args.lookahead,
+        )
+        print(f"Initial batch moves: {len(batch)}")
+        print(f"Selected algorithm: {batch_info.get('selected_algorithm', 'none')}")
+        if batch_info.get("candidate_results"):
+            print("Candidate algorithms:")
+            for item in batch_info["candidate_results"][:12]:
+                print(
+                    f"  {item['name']}: remove={item['removed_count']}, "
+                    f"batch={item['batch_size']}, predicted={item['predicted_total_removed']}"
+                )
+        for index, move in enumerate(batch[:20], start=1):
+            print(format_move(move, index))
+
+        self.show_game_screen(board)
+
+    def show_game_screen(self, board: list[list[int]]):
+        if self.main_frame is not None:
+            self.main_frame.destroy()
+            self.main_frame = None
+        self.current_game = GameHelperApp(
+            self.root,
+            board,
+            self.output_dir,
+            next_round_callback=self.show_upload_screen,
+            strategy=self.args.strategy,
+            beam_width=self.args.beam_width,
+            lookahead=self.args.lookahead,
+        )
 
 
 def main():
     args = parse_args()
-    image_path = Path(args.image_path)
     templates_dir = Path(args.templates)
-    output_dir = Path(args.output)
-
-    if not image_path.exists():
-        print(f"Error: input image not found: {image_path}")
-        sys.exit(1)
 
     if not templates_dir.exists():
         print(f"Error: templates folder not found: {templates_dir}")
         sys.exit(1)
 
-    ensure_dir(output_dir)
-
     try:
-        tile_paths, tile_meta, crop_method = crop_tiles(
-            image_path,
-            args.rows,
-            args.cols,
-            output_dir,
-            tile_trim=args.tile_trim,
-        )
-    except Exception as exc:
-        print(f"Error during cropping: {exc}")
-        sys.exit(1)
-
-    print(
-        f"Cropped {len(tile_paths)} tiles to {output_dir / 'temp'} "
-        f"using {crop_method} with tile trim {args.tile_trim}px."
-    )
-
-    try:
-        flat_numbers, board, recognition_details = recognize_board(
-            tile_paths, templates_dir, args.rows, args.cols
-        )
-    except Exception as exc:
-        print(f"Error during recognition: {exc}")
-        sys.exit(1)
-
-    print("\nRecognized board")
-    print("----------------")
-    print(board_to_text(board))
-
-    low_confidence = [
-        detail for detail in recognition_details if detail["confidence"] < LOW_CONFIDENCE_THRESHOLD
-    ]
-    if low_confidence:
-        print("\nLow confidence warnings")
-        print("-----------------------")
-        for detail in low_confidence:
-            print(
-                f"{detail['file']}: digit={detail['digit']}, confidence={detail['confidence']:.3f}, "
-                f"score={detail['score']:.1f}, holes={detail['hole_count']}"
-            )
-
-    all_moves = find_valid_moves(board)
-    batch = select_non_overlapping_batch(all_moves)
-    print(f"\nAll valid moves: {len(all_moves)}")
-    print(f"Initial batch moves: {len(batch)}")
-    for index, move in enumerate(batch[:20], start=1):
-        print(format_move(move, index))
-
-    try:
-        save_board(
-            output_dir,
-            args.rows,
-            args.cols,
-            flat_numbers,
-            board,
-            recognition_details,
-            tile_meta,
-            crop_method,
-        )
-        save_history(output_dir, board, board, [])
-    except Exception as exc:
-        print(f"Error saving output files: {exc}")
-        sys.exit(1)
-
-    print("\nOpening tkinter GUI for batch rounds...")
-
-    try:
-        start_tkinter_gui(board, output_dir)
+        root = tk.Tk()
+        UploadScreen(root, args)
+        root.mainloop()
     except tk.TclError as exc:
         print(f"Error starting tkinter GUI: {exc}")
         sys.exit(1)
